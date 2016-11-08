@@ -1,0 +1,98 @@
+//== element reset
+* {
+  box-sizing: border-box;
+}
+html,body { height:100% }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+}
+a:hover {
+  text-decoration: none;
+}
+.row.nopadding {
+  margin: 0 auto !important;
+  [class*="col-"] {
+    padding: 0;
+  }
+}
+.inline {
+  display: inline-block;
+}
+.inline,input,select,button,table  {
+  vertical-align: middle;
+}
+.radio {
+  padding:4px 0;
+  label { margin-right: 1em;}
+  [type="radio"] {
+    vertical-align: top;
+    margin: 1px 4px 1px 0;
+  }
+
+}
+
+img { vertical-align: top}
+
+hr { margin:10px auto 0 auto 20px; border-top:1px solid $gray-light;  }
+
+//== form
+.form-control {
+  height: 30px;
+}
+.form-inline .form-control {
+  margin-right: 2px !important;
+}
+.input-group-btn .btn {
+  height:30px ;
+}
+//== size
+$width-list: 50 100 120 150 200 250 300;
+@each $size_ in $width-list {
+  //너비셋팅
+  .w#{$size_}{//고정
+    width: $size_ * 1px !important;
+  }
+  .mxw#{$size_}{//최대크기
+    max-width: $size_ * 1px;
+  }
+  .miw#{$size_}{//최소크기
+    min-width: $size_ * 1px;
+  }
+}
+//== color
+.yellow { color:yellow}
+//== padding
+$padding-list: 2 4 6 10 20;
+@each $pd_ in $padding-list {
+  .ap#{$pd_}{//전체 간격
+    padding: $pd_ * 1px;
+  }
+  .mb#{$pd_}{//전체 간격
+    margin-bottom: $pd_ * 1px;
+  }
+}
+
+.left {
+  float: left;
+  button {
+    margin-right: 4px;
+  }
+}
+.right {
+  float: right;
+  button {
+    margin-left: 4px;
+  }
+}
+
+ol.action-result {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    text-align: left;
+    margin-bottom: 6px;
+  }
+}
