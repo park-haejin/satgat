@@ -6,7 +6,6 @@ body {
 
 .Wrap {
   height:100%;
-  overflow:hidden;
   //== header
   .header {
     background: #333;
@@ -242,7 +241,9 @@ body {
     margin: 0 auto;
     min-height: 500px;
     padding-bottom:20px;
-
+    @media (max-width: $thema-mobile-width) {
+      padding: 1em 1em 20px;
+    }
     //== 상품정렬 카테고리
     .sort-menu {
       border-bottom:1px solid #EEE ;
