@@ -61,7 +61,12 @@ $width-list: 50 100 120 150 200 250 300;
   }
 }
 //== color
-.yellow { color:yellow}
+.red  { color:$brand-danger}
+.blue  { color:$brand-primary}
+.yellow { color:$brand-warning}
+.green { color:$brand-success }
+.gray { color: $gray-light}
+
 //== padding
 $padding-list: 2 4 6 10 20;
 @each $pd_ in $padding-list {
@@ -73,24 +78,23 @@ $padding-list: 2 4 6 10 20;
   }
 }
 
-.left {
+//== 타이포 정렬
+.float-left {
   float: left;
-  button {
-    margin-right: 4px;
-  }
 }
-.right {
+.float-right {
   float: right;
-  button {
-    margin-left: 4px;
-  }
 }
+
+ul.LBox		{ padding:0; border:0; list-style: none}
+.LBox:after	{ content:" "; display:block; clear:both;}
+.LBox > li	{ float:left; padding:0; border:0;}
+.LBox > li.li_R	{ float:right; }
 
 ol.action-result {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   li {
     text-align: left;
     margin-bottom: 6px;

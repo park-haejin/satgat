@@ -12,7 +12,7 @@ var dist = 'public/dist';
 var paths = {
     js: src + '/js',
     scss: src + '/scss',
-    html: src + '/**/*.html'
+    html: src + '/view/**/*.html'
 };
 
 function errorAlert(error) {
@@ -36,9 +36,25 @@ gulp.task('PLUGINS:combine', function () {
             'node_modules/bootstrap/dist/js/bootstrap.js'
         ])
         .pipe(plumber({errorHandler: errorAlert}))
-        .pipe(concat('script.js'))
+        .pipe(concat('plug-in.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(dist + '/js'));
+        .pipe(gulp.dest(dist + '/static/js'));
+});
+
+// Fonts : 나눔바른고딕
+gulp.task('FONTS:webfont', function() {
+    return gulp.src([
+            'public/lib/awesome-bootstrap-checkbox.css',
+            'public/lib/nanumfont/fonts.css',
+            'public/lib/nanumfont/fonts/NanumBarunGothic.*'
+        ])
+        .pipe(gulp.dest(dist + '/static/css/fonts'));
+});
+
+// image
+gulp.task('IMAGES:common', function() {
+    return gulp.src(src+'/img/**/*.*')
+        .pipe(gulp.dest(dist + '/static/images/'));
 });
 
 // sass 파일을 css 로 컴파일한다.
@@ -46,12 +62,12 @@ gulp.task('SASS:compile', function () {
     return gulp.src(paths.scss + '/style.scss')
         .pipe(plumber({errorHandler: errorAlert}))
         .pipe(sass({outputStyle:'compressed'}))
-        .pipe(gulp.dest(dist + '/css'));
+        .pipe(gulp.dest(dist + '/static/css'));
 });
 
 // HTML 파일을 압축한다.
 gulp.task('HTML:compress', function () {
-    return gulp.src(paths.html)
+    return gulp.src(src+'/view/**/*.html')
         // .pipe(minifyhtml())
         .pipe(gulp.dest(dist + '/'));
 });
@@ -65,4 +81,4 @@ gulp.task('watch', function () {
 });
 
 //기본 task 설정
-gulp.task('default', [ 'server', 'PLUGINS:combine',  'SASS:compile',  'HTML:compress','watch']);
+gulp.task('default', [ 'server', 'PLUGINS:combine', 'FONTS:webfont' ,'SASS:compile',  'HTML:compress','IMAGES:common','watch']);
