@@ -12,6 +12,7 @@ a:hover {
 }
 .row.nopadding {
   margin: 0 auto !important;
+  padding: 0;
   [class*="col-"] {
     padding: 0;
   }
@@ -47,7 +48,7 @@ hr { margin:10px auto 0 auto 20px; border-top:1px solid $gray-light;  }
   height:30px ;
 }
 //== size
-$width-list: 50 100 120 150 200 250 300;
+$width-list: 50 100 110 120 150 200 210 250 300;
 @each $size_ in $width-list {
   //너비셋팅
   .w#{$size_}{//고정
@@ -68,10 +69,13 @@ $width-list: 50 100 120 150 200 250 300;
 .gray { color: $gray-light}
 
 //== padding
-$padding-list: 2 4 6 10 20;
+$padding-list: 2 4 5 6 10 20;
 @each $pd_ in $padding-list {
   .ap#{$pd_}{//전체 간격
     padding: $pd_ * 1px;
+  }
+  .pt#{$pd_}{//전체 간격
+    padding-top: $pd_ * 1px !important;
   }
   .mb#{$pd_}{//전체 간격
     margin-bottom: $pd_ * 1px;
@@ -99,4 +103,18 @@ ol.action-result {
     text-align: left;
     margin-bottom: 6px;
   }
+}
+
+.noround {
+  border-radius: 0 !important;
+}
+.table.noline {
+  &,td,th {
+    border: 0;
+  }
+}
+
+.form-control.btn-sm {
+  height: 28px;
+  padding:3px 10px ;
 }

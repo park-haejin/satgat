@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 // var minifyhtml = require('gulp-minify-html');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
+var headerfooter = require('gulp-headerfooter');
 
 //path
 var src = 'public/src';
@@ -33,12 +34,22 @@ gulp.task('PLUGINS:combine', function () {
             'node_modules/console-polyfill/index.js',
             'node_modules/moment/moment.js',
             'node_modules/jquery/dist/jquery.js',
-            'node_modules/bootstrap/dist/js/bootstrap.js'
+            'node_modules/bootstrap/dist/js/bootstrap.js',
+            'node_modules/fotorama/fotorama.js'//캐러셀 플러그인
         ])
         .pipe(plumber({errorHandler: errorAlert}))
         .pipe(concat('plug-in.js'))
         .pipe(uglify())
         .pipe(gulp.dest(dist + '/static/js'));
+});
+
+//lib plug-in
+gulp.task('PLUGINS:lib', function() {
+    return gulp.src([
+            'public/lib/**/*.*',
+            '!public/lib/nanumfont/**/*.*'//나눔폰트는 제외
+        ])
+        .pipe(gulp.dest(dist + '/static/lib/'));
 });
 
 // Fonts : 나눔바른고딕
@@ -65,10 +76,18 @@ gulp.task('SASS:compile', function () {
         .pipe(gulp.dest(dist + '/static/css'));
 });
 
-// HTML 파일을 압축한다.
-gulp.task('HTML:compress', function () {
-    return gulp.src(src+'/view/**/*.html')
-        // .pipe(minifyhtml())
+// HTML  - index
+gulp.task('HTML:index', function () {
+    return gulp.src(src+'/view/*.html')
+    // .pipe(minifyhtml())
+        .pipe(gulp.dest(dist + '/'));
+});
+
+// header + section + footer
+gulp.task('HTML:combine', function () {
+    return gulp.src(src+'/view/*/*.html')
+        .pipe(headerfooter.header(src+'/common/_header.html'))
+        .pipe(headerfooter.footer(src+'/common/_footer.html'))
         .pipe(gulp.dest(dist + '/'));
 });
 
@@ -77,8 +96,8 @@ gulp.task('watch', function () {
   // gulp.watch(paths.js, ['PLUGINS:combine']);
     gulp.watch(paths.scss + '/*.scss', ['SASS:compile']);
     gulp.watch(paths.scss + '/**/*.scss', ['SASS:compile']);
-    gulp.watch(paths.html, ['HTML:compress']);
+    gulp.watch(paths.html, ['HTML:combine']);
 });
 
 //기본 task 설정
-gulp.task('default', [ 'server', 'PLUGINS:combine', 'FONTS:webfont' ,'SASS:compile',  'HTML:compress','IMAGES:common','watch']);
+gulp.task('default', [ 'server', 'PLUGINS:combine','PLUGINS:lib', 'FONTS:webfont' ,'SASS:compile', 'HTML:index', 'HTML:combine','IMAGES:common','watch']);

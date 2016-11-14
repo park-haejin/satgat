@@ -1,0 +1,47 @@
+//== prod-header :  딜 캐러셀 및 상품가격정보, 구매 이벤트 처리
+.prod-header {
+   padding-bottom: 10px;
+  .prod-carousel {
+    .fotorama {
+      border:1px solid #CED0CD;
+    }
+  }
+  .prod-tbl {
+    color:#707070;
+    th, td {
+      padding: 1em 10px;
+      padding-right: 0;
+      font-size: 1.1em;
+    }
+    th {
+      font-weight: normal;
+    }
+    small {
+      font-size: 11px;
+      color: #CBCBCB;
+      button {
+        color: #B0B0B0;
+      }
+    }
+    .btm {
+      th,td {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .prod-buy-choiceBox {
+    padding-left: 10px;
+    .row {
+      border: 1px solid #E6E6E6;
+      padding: 1.2em 1em;
+    }
+  }
+  .prod-lastcost {
+    padding: 0.2em 0 0.4em;
+    padding-left: 10px;
+  }
+  //== 상품 submit
+  .prod-submit {
+    padding-left: 10px;
+  }
+}

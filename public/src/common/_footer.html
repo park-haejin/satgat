@@ -1,0 +1,41 @@
+<footer>
+    <div class="footer">
+        <nav>
+            <div class="footer-nav">
+                <a href="#">삿갓유통 소개</a>
+                <a href="#">고객센터</a>
+                <a href="#">이용안내</a>
+                <a href="#">판매 및 제휴문의</a>
+            </div><!--//footer navigation  -->
+        </nav>
+        <div class="footer-company-info">
+            <div>상호명 : WMB | 대표 : 김필범 | 사업자 등록번호 : 122-30-32639[사업자정보확인] | 통신판매업 신고 2012-인천계양-0391</div>
+            <adress>
+                전화 : 1544-6930 | 팩스 : 032-714-3275 | 주소 : 인천광역시 부평구 세월천로 25번길 40(청천동) 4층 삿갓유통 사무실
+            </adress>
+            <div class="footer-company-admin">개인정보취급방침 개인정보관리책임자 : 김인영(<a href="mailto:wmb2012@naver.com">wmb2012@naver.com</a>) | Powered by IDEAREPUBLIC</div>
+            <div class="copyright">ⓒ2012 SATGAT MARKET, All rights reserved.</div>
+
+        </div><!--//footer information -->
+    </div>
+</footer>
+</div>
+<!-- common plug-in JS -->
+<script type="text/javascript" src="/static/js/plug-in.js"></script>
+<script type="text/javascript">
+    /** event */
+    //로그인 : 바로가기
+    $('.loginBtn').bind("click",function(e){
+        $(location).attr("href","#");
+    });
+    //회원가입 : 바로가기
+    $('.memberBtn').bind("click",function(e){
+        $(location).attr("href","/member/membership.html");
+    });
+    //알림창 토글
+    $('.userBtn').bind("click",function(e){
+        $('.alarm').toggleClass('on')
+    });
+</script>
+</body>
+</html>

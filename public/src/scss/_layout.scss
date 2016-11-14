@@ -45,7 +45,7 @@ body {
       position: relative;
       height: 46px;
       line-height: 46px;
-      max-width: 1240px;
+      //max-width: 1240px;
       margin: 0 auto;
       .nav-btn {
         display: inline-block;
@@ -171,6 +171,7 @@ body {
 
       //== 알림창
       .alarm {
+        display: none;
         position: absolute;
         top:46px;right: 0;
         width: 360px;
@@ -178,6 +179,9 @@ body {
         color: #CDCDCD;
         background: rgba(0,0,0,0.75);
         z-index: 1;
+        &.on {
+          display: block;
+        }
         ul {
           width: 360px;
           margin: 0;
@@ -240,6 +244,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     min-height: 500px;
+    padding: 0;
     padding-bottom:20px;
     box-sizing: border-box;
     @media (max-width: $thema-mobile-width) {
@@ -248,7 +253,6 @@ body {
     //== 상품정렬 카테고리
     .sort-menu {
       border-bottom:1px solid #EEE ;
-      margin: 0 -14px;
       margin-bottom: 36px;
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
@@ -265,6 +269,7 @@ body {
           color: $brand-primary;
         }
         &.activate {
+           color: $brand-primary;
           border-bottom:1px solid #6FADFF;
         }
       }
@@ -272,7 +277,6 @@ body {
 
     //== 상품 목록
     .list {
-      margin: 0 -14px;
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
       }

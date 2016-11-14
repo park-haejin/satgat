@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="/static/lib/fotorama/fotorama.css">
+    <section>
+        <div class="container">
+
+            <div class="sort-menu">
+                <a href="/deals/deal_view.html">이야기</a>
+                <a href="/deals/deal_view.html">커뮤니티</a>
+                <a href="/deals/deal_view.html" class="activate">구매하기</a>
+            </div><!--//sort-menu -->
+            <div class="container">
+                <div class="row  nopadding prod-header">
+                    <div class="col-md-6 prod-carousel">
+                        <div class="fotorama" data-width="434" data-height="434" style="max-width: 434px; max-height: 434px">
+                            <div><img alt="" src="/static/images/sample-photo.jpg" style="width: 434px;height: 434px;"></div>
+                            <div><img alt="" src="/static/images/sample-photo.jpg" style="width: 434px;height: 434px;"></div>
+                        </div><!-- //prod-carousel -->
+                    </div>
+                    <div class="col-md-6 prod-buy">
+                        <form id="buyFrm" name="" action="#">
+                            <h3>청귤각</h3>
+                            <p class="prod-ment">청귤, 제주의 여름을 새파랗게 담았네</p>
+                            <table class="prod-tbl table noline">
+                                <colgroup>
+                                    <col style="width: 35%;">
+                                    <col style="width: 65%;">
+                                </colgroup>
+                                <tr>
+                                    <th>판매가</th>
+                                    <td><strong>34,000 원</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>생산자</th>
+                                    <td>조혜란 / 제주</td>
+                                </tr>
+                                <tr>
+                                    <th>배송비</th>
+                                    <td>
+                                        2,500 원<br>
+                                        <small>( 제주, 도서지역 추가 2,500원 ) <button type="button" class="btn btn-xs">묶음배송안내</button></small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>적립금</th>
+                                    <td>100point</td>
+                                </tr>
+                                <tr class="btm">
+                                    <th>선택사항</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>선택사항1</option>
+                                            <option>선택사항2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="prod-buy-choiceBox">
+                                <div class="row nopadding">
+                                    <div class="col-md-5 pt4">
+                                        선택사항1
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <button type="button" class="btn btn-default btn-sm  noround">-</button>
+                                        <input type="number" id="ch-1" name="" min="1" value="1" class="form-control btn-sm inline w50 noround">
+                                        <button type="button" class="btn btn-default btn-sm  noround">+</button>
+                                    </div>
+                                    <div class="col-md-3  pt4  text-right">
+                                        3,400 원
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="prod-lastcost"><strong>총 상품금액 : <span class="price">36,500</span> 원</strong></h3>
+                            <div class="prod-submit">
+                                <button type="button" class="btn btn-lg btn-default red noround"><i class="fa fa-heart-o"></i> </button>
+                                <button type="button" class="btn btn-lg btn-default blue noround w110"><strong>재입고 알림</strong></button>
+                                <button type="button" class="btn btn-lg btn-default blue noround w110"><strong>장바구니</strong></button>
+                                <button type="submit" class="btn btn-lg btn-primary noround w210"><strong>바로구매</strong></button>
+                            </div>
+                        </form>
+                    </div><!-- //prod-buy-->
+                </div><!-- //prod-header -->
+            </div>
+        </div><!-- //container-->
+    </section>
