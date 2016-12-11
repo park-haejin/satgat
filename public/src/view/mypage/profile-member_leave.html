@@ -1,0 +1,138 @@
+
+    <section>
+        <div class="container-intro">
+            <div class="container-intro-contents">
+
+                <div class="container-intro-contents-photo">
+                    <div class="user-photo">
+                        <img alt="user" src="/static/images/member/sim-3.gif">
+                    </div><!-- ed : user-photo -->
+                    <button type="button" class="btn  btn-primary editUserProfileBtn">Edit.</button>
+                </div>
+
+                <h3><i class="fa fa-user"></i> username</h3>
+
+                <div class="container-intro-contents-info">
+                    <span class="container-intro-contents-info-arrow-top"></span>
+                    <span>750 Point.</span>	  |
+                    <span>Gold</span>	     |
+                    <span>ohj950228@gmail.com</span>
+                </div>
+
+            </div><!--// ed : container-intro-contents -->
+        </div>
+        <div class="container top-intro">
+
+            <div class="sub-title my-title">
+                <ul class="LBox">
+                    <li class="category-title">
+                        <h1><img alt="마이삿갓" src="/static/images/my_h1.gif"></h1>
+                    </li>
+                    <li>
+                        <!--<h1><img alt="마이페이지" src="/static/images/notify_h1.gif"></h1>-->
+                        <div class="my-section-ment">
+                            삿갓유통을 마음껏 즐길 수 있는절호의 찬스
+                        </div>
+                    </li>
+                </ul>
+            </div><!--// ed :  sub-title -->
+
+            <div class="my-page">
+                <aside>
+                    <ul  class="my-menu">
+
+                        <li class="depth1">
+                            <h4>프로필 <i class="fa fa-angle-down"></i></h4>
+                            <ul class="depth2">
+                                <li><a href="profile-myinfo.html">내정보</a> </li>
+                                <li><a href="profile-member_leave.html" class="active">회원탈퇴..</a> </li>
+                            </ul>
+                        </li>
+
+                        <li class="depth1">
+                            <h4>혜택 <i class="fa fa-angle-down"></i></h4>
+                            <ul class="depth2">
+                                <li><a href="advantage-point.html">삿갓포인트</a> </li>
+                                <li><a href="advantage-coupon.html">삿갓쿠폰</a> </li>
+                                <li><a href="advantage-coupon-regi.html">쿠폰입력</a> </li>
+                                <li><a href="advantage-level.html">등급</a> </li>
+                            </ul>
+                        </li>
+
+                        <li class="depth1">
+                            <h4>장보기 <i class="fa fa-angle-down"></i></h4>
+                            <ul class="depth2">
+                                <li><a href="cart-my.html">장바구니</a> </li>
+                                <li><a href="cart-search.html">주문/배송조회</a> </li>
+                                <li><a href="cart-like.html">좋아요♥</a> </li>
+                            </ul>
+                        </li>
+
+                        <li class="depth1">
+                            <h4>고객센터 <i class="fa fa-angle-down"></i></h4>
+                            <ul class="depth2">
+                                <li><a href="help-direct.html">1:1 상담</a> </li>
+                                <li><a href="help-faq.html">자주 묻는 질문</a> </li>
+                                <li><a href="help-notify.html">공지사항</a> </li>
+                                <li><a href="help-event.html">이벤트 소식</a> </li>
+                            </ul>
+                        </li>
+
+                    </ul><!--// ed : my aside menu -->
+                </aside>
+                <div class="my-contents">
+                    <h4 class="section-title">회원탈퇴하기</h4>
+                    <div class="my-leave">
+                        <h4 class="my-leave-ment"><strong>“ 참말.. 가실건가요..? ”</strong></h4>
+                        <hr class="noMg">
+                        <div class="pt10"></div><div class="pt20"></div>
+                        <div class="bbs-form noline">
+                        <form id="Frm" name="" action="profile-member_leave_sucess.html">
+                            <table class="table tbl text-left">
+                                <colgroup>
+                                    <col style="width: 180px">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>
+                                        user0001
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td>
+                                        <input type="text" name="" class="form-control">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호 확인</th>
+                                    <td>
+                                        <input type="text" name="" class="form-control">
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="gray"><small>* 회원님의 안전한 정보보호를  위해 비밀 번호를 입력해주세요.</small></p>
+                            <div class="pt10"></div><div class="pt20"></div>
+                            <hr class="noMg">
+                            <div class="pt10"></div><div class="pt20"></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg w150">탈퇴하기</button>
+                                <button type="button" class="btn btn-default btn-lg w150" onclick="history.back(-1)">취소하기</button>
+                            </div>
+                        </form>
+                        </div><!--//  ed :  bbs-form-normal  -->
+
+                    </div><!--//  ed :  my-leave -->
+
+                </div><!--// ed : my contents -->
+                <div class="clearfix"></div>
+            </div>
+        </div><!-- //container-->
+    </section>
+
+<script type="text/javascript">
+    $('.my-menu h4').bind("click",function () {
+        $(this).next().toggle();
+    });
+</script>

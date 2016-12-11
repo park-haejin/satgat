@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+html,body {
+  height:100%;
+}
 body {
   font-family:'Nanum Barun Gothic';
   font-size: 14px;
@@ -6,12 +12,33 @@ body {
 
 .Wrap {
   height:100%;
+  //== topbanner hide
+  &.disableTopBnr  .header {
+    top: -45px;
+  }
+  &.disableTopBnr  .container-intro {
+    margin-top: 51px;
+  }
+  &.disableTopBnr  .container {
+    padding-top: 51px;
+    &.top-intro {
+      padding-top: 0;
+    }
+  }
+
+  &.disableTopBnr .container  .sort-menu {
+    margin-top: 4px;
+  }
   //== header
   .header {
+    position: fixed;
+    top:0;    left: 0;    right: 0;
     background: #333;
+    z-index: 3;
+    transition: top 0.5s  ease;
     //== header banner
     .header-banner {
-      min-height: 45px;
+      height: 45px;
       line-height: 45px;
       text-align: center;
       color: #FFF;
@@ -21,7 +48,7 @@ body {
         max-width: 1240px;
         margin: 0 auto;
       }
-      .closeEventBtn {
+      .closeTopBannerBtn {
         float: right;
         height: 45px;
         border: 0;
@@ -42,10 +69,13 @@ body {
     //== navigation : desktop top menu
     .pc-topmenu {
       position: relative;
-      height: 46px;
+      height: 49px;
       line-height: 46px;
       //max-width: 1240px;
       margin: 0 auto;
+      .LBox {
+        margin: 0;
+      }
       .nav-btn {
         display: inline-block;
         height: 45px;
@@ -152,16 +182,6 @@ body {
         text-align: center;
         color: #CDCDCD;
         background: #282828;
-        .user-photo {
-          display: inline-block;
-          width: 28px;
-          height: 28px;
-          margin-right: 0.5em;
-          border-radius: 50%;
-          background: url(/static/images/user-photo-empty.gif) no-repeat center center;
-          background-size: contain ;
-          vertical-align: middle;
-        }
         &:hover {
           color: #FFF;
         }
@@ -221,6 +241,16 @@ body {
           }
         }
       }
+      //== 탑메뉴 끝 그라데이션 처리
+      .pc-topmenu-gr {
+        height: 3px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,00578a+100 */
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(left,  #ffffff 0%, #00578a 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #ffffff 0%,#00578a 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #ffffff 0%,#00578a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00578a',GradientType=1 ); /* IE6-9 */
+      }
     }
 
     //== navigation : mobile top menu
@@ -239,27 +269,115 @@ body {
   }
 
   //== 본문
+  .container-intro {
+    position: relative;
+    padding: 0 1em;
+    margin-top: 96px;
+    min-height: 200px;
+    background: #171614;
+    transition: all 0.5s  ease;
+    @media (max-width: $thema-mobile-width) {
+      padding: 0  1em 20px;
+      margin-top: 90px;
+    }
+    .container-intro-contents {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 16px;
+      padding-bottom: 24px;
+      text-align: center;
+      color: #FFF;
+      .container-intro-contents-photo {
+        position: relative;
+        max-width: 1000px;
+        text-align: center;
+        .user-photo {
+          width: 132px;
+          height: 132px;
+        }
+        .btn {
+          position: absolute;
+          top:66px;
+          right: 0;
+          width: 90px;
+          border-radius: 5px;
+        }
+      }
+      //사용자
+      h3 {
+        margin: 11px 0 27px;
+        .fa {
+          font-size: 0.8em;
+        }
+      }
+      //== 간단한 사용자 정보
+      .container-intro-contents-info {
+        position: relative;
+        padding: 1em 0;
+        background: #0A0908;
+        span {
+          display: inline-block;
+          margin: 0 2em;
+          color: $gray-light;
+        }
+        .container-intro-contents-info-arrow-top {
+          position: absolute;
+          top:-16px;
+          left:50%;
+          margin-left:-16px;
+          border-left:16px solid transparent;
+          border-right:16px solid transparent;
+          border-bottom:16px solid #0A0908;
+        }
+      }
+    }
+  }
   .container {
+    position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    min-height: 500px;
+    min-height: 600px;
     padding: 0;
-    padding-bottom:20px;
+    padding-top: 90px;
+    padding-bottom:100px;
     box-sizing: border-box;
-    @media (max-width: $thema-mobile-width) {
-      padding: 1em 1em 20px;
+    transition: all 0.5s  ease;
+    &.top-intro {
+      padding-top: 0;
     }
+    @media (max-width: $thema-mobile-width) {
+      padding: 90px  1em 20px;
+      &.top-intro {
+        padding-top: 0;
+      }
+    }
+    //== title
+    .sub-title {
+      border-bottom: 2px solid #6F99CB;
+      h1 { margin: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     //== 상품정렬 카테고리
     .sort-menu {
+      width: 100%;
+      max-width: 1000px;
       border-bottom:1px solid #EEE ;
+      margin-top: 49px;
       margin-bottom: 36px;
+      text-align: center;
+      background: rgba(255,255,255,0.8);
+      transition: all 0.5s  ease;
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
         margin-bottom: 36px;
       }
       a {
         display: inline-block;
-        margin: 34px 20px 0;
+        margin: 34px 15px 0;
         padding-bottom: 15px;
         color: #505050;
         font-weight: bold;
@@ -268,7 +386,7 @@ body {
           color: $brand-primary;
         }
         &.activate {
-           color: $brand-primary;
+          color: $brand-primary;
           border-bottom:1px solid #6FADFF;
         }
       }
@@ -345,4 +463,45 @@ body {
       }
     }
   }
+}
+
+//== pc 에서만 보기
+.box-show-pc {
+  display: block;
+  @media (max-width: $thema-mobile-width) {
+    display: none;
+  }
+}
+
+//== 모바일 에서만 보기
+.box-show-mb {
+  display: none;
+  @media (max-width: $thema-mobile-width) {
+    display: block;
+  }
+}
+
+//==  숫자변경
+.box-amount {
+  input[type="number"] {
+    height: 2.7em;
+  }
+}
+//== 사용자 사진
+.user-photo {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: url(/static/images/user-photo-empty.gif) no-repeat center center;
+  background-size: contain ;
+  vertical-align: middle;
+  overflow: hidden;
+  box-shadow: inset rgba(0,0,0,0.8) 0 0 2px;
+}
+.user-photo img {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset rgba(0,0,0,0.8) 0 0 2px;
 }

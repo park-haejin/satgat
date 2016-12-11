@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>삿갓유통</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/static/css/fonts/awesome-bootstrap-checkbox.css">
     <link rel="stylesheet" type="text/css" href="/static/css/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-
+    <script type="text/javascript" src="/static/js/plug-in.js"></script>
 </head>
 <body>
 <div class="Wrap">
@@ -15,7 +17,7 @@
             <div class="header-banner text-center">
                 <div class="header-banner-view">
                     <strong>#이벤트 #파워닭</strong> 2kg 이상 주문시 소스증정	GO
-                    <button type="button" class="closeEventBtn"><small><i class="fa fa-check-circle-o"></i> 하루동안 닫기</small><i class="fa fa-close"></i> </button>
+                    <button type="button" class="closeTopBannerBtn"><small><i class="fa fa-check-circle-o"></i> 하루동안 닫기</small><i class="fa fa-close"></i> </button>
                     <div class="clearfix"></div>
                 </div>
             </div><!--//top banner -->
@@ -34,25 +36,29 @@
                         </li>
                         <li class="li_R">
                             <button type="button" class="nav-btn satgatMailBtn">삿갓우체국</button><!--
-                        --><button type="button" class="nav-btn csBtn">고객센터</button><!--
-                        //로그인 전
-                        --><div class="inline loginBox"><button type="button" class="nav-btn loginBtn">로그인</button><!--
-                        --><button type="button" class="nav-btn memberBtn">회원가입</button></div><!--
-                        // 로그인 후
-                        --><div class="inline userInfoBox"><button type="button" class="nav-btn btn-sm userMailBtn">
-                            <i class="fa fa-envelope"></i>
-                            <span class="badge">1</span>
-                        </button><!--
-                            --><button type="button" class="nav-btn btn-sm cartBtn">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="badge">2</span>
-                        </button><!--
-                            --><button type="button" class="userBtn">
-                                    <span class="user-photo">
+                        --><a href="../cs/notify_list.html" type="button" class="nav-btn csBtn">고객센터</a><!--
 
-                                    </span>
-                            <i class="fa fa-angle-down"></i>
-                        </button></div>
+
+                        //로그인 전
+                        <div class="inline loginBox"><a href="../member/login.html" class="nav-btn loginBtn">로그인</a><!--
+                        <a href="../member/membership.html" class="nav-btn memberBtn">회원가입</a></div><!--
+
+
+                        // 로그인 후
+                        --><div class="inline userInfoBox"><!--
+                                --><button type="button" class="nav-btn btn-sm userMailBtn">
+                                    <i class="fa fa-envelope"></i>
+                                    <span class="badge">1</span>
+                                </button><!--
+                                    --><button type="button" class="nav-btn btn-sm cartBtn">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="badge">2</span>
+                                </button><!--
+                                    --><button onclick="location.href='../mypage/profile-myinfo.html'" class="userBtn">
+                                            <span class="user-photo"></span>
+                                    <i class="fa fa-angle-down"></i>
+                                </button>
+                            </div>
                         </li>
                     </ul>
                     <div class="alarm">
@@ -98,6 +104,7 @@
                             </ul>
                         </div>
                     </div><!--//alram -->
+                    <div class="pc-topmenu-gr"></div>
                 </div><!--//pc topmenu  -->
                 <div class="mb-topmenu text-right">
                     <button type="button" class="btn listBtn"><i class="fa fa-bars"></i></button>

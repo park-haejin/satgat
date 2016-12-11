@@ -1,0 +1,27 @@
+//== pop
+.Pop-Wrap {
+
+  .modal-header {
+    padding: 1em 2em 0.3em;
+    color:#FFF;
+    background: #313131;
+    p {
+      padding-top: 1em;
+      color:#B1B1B1;
+      font-size: 0.8em;
+    }
+    button {
+      color: #FFF;
+    }
+  }
+  .modal-body {
+    padding: 1em 2em;
+    td {
+      font-size: 0.85em;
+    }
+  }
+  .info-box {
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
+}

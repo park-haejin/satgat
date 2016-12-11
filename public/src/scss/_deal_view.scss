@@ -1,3 +1,184 @@
+
+//==  커뮤니티
+.box-chatt {
+  .line-right {
+    margin-right: -1px;
+  }
+  @media (max-width: $thema-mobile-width) {
+    & .line-right,& .line-left {
+      margin: 0;
+      border: 0;
+    }
+  }
+  .moreBtn {
+    height: 44px;
+    color: #B0B0B0;
+    border-color: #A0C3FF;
+    &:hover {
+      color:#000;
+    }
+  }
+}
+//== 타이틀
+.chatt-title {
+  h2 {
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  h1 {
+    margin: 0;
+    margin-bottom: 11px;
+  }
+  p {
+    color: $gray-light;
+  }
+}
+//== 댓글입력
+.chatt-box-form {
+  padding: 15px;
+  background: #EEEEEE;
+
+}
+.chatt-from {
+  width: 100%;
+  height: 50px;
+  .user-photo {
+    width:50px;
+    height: 50px;
+  }
+  td {
+    border: 0;
+    padding: 0;
+    vertical-align:top;
+  }
+  &.comment-btn {
+    input[type="text"].form-control {
+      height: 50px;
+      border: 0;
+      border-radius: 3px 0 0 3px;
+      margin: 0;
+      vertical-align: top;
+      box-shadow: none;
+    }
+    button {
+      width: 55px;
+      height: 50px;
+      border: 0;
+      border-radius: 0 3px 3px 0;
+      vertical-align: top;
+    }
+  }
+  &.comment-regi {
+    .comment-regi-box {
+      padding: 1em;
+      padding-bottom: 0;
+      border-radius: 3px;
+      background: #FFF;
+      small {
+        color: #999;
+      }
+      textarea {
+        width: 100%;
+        height:150px;
+        resize: vertical;
+        padding:10px 0;
+        border: 0;
+        border-radius: 3px 0 0 3px;
+        margin: 0;
+        margin-bottom: -5px;
+        &.innerBd {
+          height: 150px;
+          padding: 0.5em;
+          resize: vertical;
+          border: 1px solid #EEE;
+        }
+      }
+    }
+  }
+}
+
+//== chatting 내역
+.box-chatting {
+  list-style: none;
+  margin-top:13px ;
+  padding: 0;
+  li {
+    padding: 13px 0;
+  }
+
+  //== 챗팅 본문
+  .user-photo {
+    width: 80%;
+    max-width:77px;
+    height: 40%;
+    max-height: 77px;
+    border: 0;
+    background: #FFF;
+  }
+  .box-chatting-commet {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    padding-top: 0;
+    color: #838383;
+    background: #FFF;
+    .date {
+      font-size: 12px;
+    }
+    .li_R {
+      color: #838383;
+    }
+    .box-chatting-edit {
+      position: absolute;
+      width: 76px;
+      top:15px;
+      right: 40px;
+      border: 1px solid #CACACA;
+      z-index: 1;
+      button {
+        border: 0;
+        border-radius: 0;
+      }
+    }
+    .box-chatting-commet-con {
+      white-space: pre-line;
+    }
+    .chatt-from {
+      &.commont-modi {
+        margin-top: 10px;
+        padding: 0.5em 0.5em  0;
+        height: auto;
+        background: #FFF;
+        textarea {
+          width: 100%;
+          resize: none;
+          border: 0;
+          &.innerBd {
+            height: 150px;
+            padding: 0.5em;
+            resize: vertical;
+            border: 1px solid #EEE;
+          }
+        }
+      }
+    }
+  }
+  .chatt-customer {
+    .box-chatting-commet {
+      background: #F5F5F5;
+    }
+  }
+  .chatt-helper {
+    .box-chatting-commet {
+      border: 1px solid #EEE;
+    }
+  }
+}
+.moreBuyBtn {
+  padding: 1em 0;
+  border-color: #A0C3FF;
+}
+//== 구매하기
 //== prod-header :  딜 캐러셀 및 상품가격정보, 구매 이벤트 처리
 .prod-header {
    padding-bottom: 10px;

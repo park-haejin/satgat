@@ -1,0 +1,95 @@
+//== 로그인
+.login-box {
+  width:336px ;
+  padding-top: 120px;
+  margin: 0 auto;
+  h1 {
+    padding-bottom: 46px;
+    font-weight: bold;
+    text-align: center;
+  }
+  p input {
+    height: 45px;
+    font-size: 1em;
+  }
+  .login-box-link {
+    padding-bottom: 20px;
+    label {
+      margin-right: 10px;
+    }
+    a {
+      margin-left: 10px;
+    }
+    input {
+      vertical-align: top;
+    }
+  }
+  .btn-submit {
+    width: 100%;
+    border-radius: 35px;
+  }
+}
+
+//== 회원가입
+.form-box {
+  padding: 10px 34px;
+ input[type="text"],input[type="password"], .input-text  {
+   height: 38px;
+   border: 1px solid #E6E6E6;
+ }
+
+  input[ type="radio"] {
+    vertical-align: top;
+  }
+  small {
+    color: $gray-light;
+  }
+  hr {
+    border-top-color: #E6E6E6;
+  }
+  select {
+    width: auto;
+    min-width: 140px;
+    height: 40px;
+    border-radius: 0;
+    .form-control {
+      display: inline-block;
+    }
+  }
+  .table {
+    .form-control {
+      display: inline-block;
+    }
+    th, td { padding: 14px 0; vertical-align: middle}
+    th { font-size: 1.2em; font-weight: bold;
+      span {
+        display: inline-block;
+        margin-left: 0.5em;
+        color: #EE7588;
+      }
+    }
+    small {
+      margin-left: 1em;
+    }
+  }
+  .btn {
+    height: 38px;
+    font-size: 1em;
+  }
+}
+
+.sim-box {
+  img {
+    width: 100%;
+    max-width:144px ;
+    margin-bottom: 1em;
+  }
+}
+
+.cancelbtn {
+  border: 1px solid #EAEAEA !important;
+  color: #7199CD !important;
+  &:hover {
+    color: #000;
+  }
+}

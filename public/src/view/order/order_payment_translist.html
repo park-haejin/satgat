@@ -1,0 +1,103 @@
+<!-- pop--><!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <title>삿갓유통</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script type="text/javascript" src="/static/js/plug-in.js"></script>
+</head>
+<body>
+<div class="Pop-Wrap">
+    <div class="pt20"></div>
+    <div class="info-box">
+        <ul class="no-style">
+            <li>&gt;  배송주소록에 저장된 주소목록 입니다.(최대 25개)</li>
+            <li>&gt;  전화번호나 핸드폰번호에 숫자 이외의 한글이나 특수문자가 있을 경우 택배 발송에 문제가 있을 수 있습니다.</li>
+            <li>&gt;  한글이나 특수문자가 있을 경우 배송지 선택 후 꼭 숫자로 수정해 주시기 바랍니다.</li>
+        </ul>
+    </div>
+
+    <div class="bbs-list">
+        <table class="table tbl">
+            <colgroup>
+                <col style="width:28px">
+                <col style="width:80px">
+                <col style="width: 100px">
+                <col style="width: 140px">
+                <col>
+                <col style="width: 60px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="allchk" name="" value=""></th>
+                    <th>배송지명</th>
+                    <th>받으실분</th>
+                    <th>전화번호</th>
+                    <th>주소</th>
+                    <th> 선택</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <th><input type="checkbox" id="" name="cartchk" value=""></th>
+                <td>자택</td>
+                <td>오현지</td>
+                <td>010-0000-0000</td>
+                <td>경기도 안산시 상록구 네고지3길 22 302호</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-round choiceBtn">선택</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th><input type="checkbox" id="" name="cartchk" value=""></th>
+                <td>자택</td>
+                <td>오현지</td>
+                <td>010-0000-0000</td>
+                <td>경기도 안산시 상록구 네고지3길 22 302호</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-round choiceBtn">선택</button>
+                </td>
+            </tr>
+
+            <tr>
+                <th><input type="checkbox" id="" name="cartchk" value=""></th>
+                <td>자택</td>
+                <td>오현지</td>
+                <td>010-0000-0000</td>
+                <td>경기도 안산시 상록구 네고지3길 22 302호</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-round choiceBtn">선택</button>
+                </td>
+            </tr>
+
+
+
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-lg btn-default delBtn">선택삭제</button>
+    </div><!--// ed : bbs-list-->
+</div>
+<script type="text/javascript">
+    $(function () {
+
+        //== 전체 선택 toggle
+        $('#allchk').bind("click", function () {
+            var chkStatus  = this.checked;
+            $('input[name="cartchk"]').prop("checked", chkStatus);
+        });
+
+        //== 선택버튼
+        $('.bbs-list').on("click",'.choiceBtn',function (e){
+            $(opener.document).abc();
+        } );
+
+    })
+</script>
+</body>
+</html><!-- pop-->

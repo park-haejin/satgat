@@ -1,0 +1,111 @@
+<link rel="stylesheet" type="text/css" href="/static/lib/fotorama/fotorama.css">
+    <section>
+        <div class="container">
+
+            <div class="sub-title">
+                <h1><img alt="회원가입" src="/static/images/notify_h1.gif" style="width:100%;max-width: 486px"></h1>
+            </div>
+
+            <div class="sort-menu text-left noMg">
+                <a href="notify_list.html">공지사항</a>
+                <a href="cs_list.html"  class="activate">1 : 1 센터</a>
+            </div><!--//sort -->
+            <div class="pt20"></div>
+            <div class="pt20"></div>
+
+
+            <div class="bbs-list">
+                <table class="table tbl text-center">
+                    <colgroup>
+                        <col style="width: 100px">
+                        <col style="width: 100px">
+                        <col>
+                        <col style="width: 170px">
+                        <col style="width: 170px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>주문번호</th>
+                        <th>카테고리</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th data-tit="주문번호" class="text-center">EN987456321</th>
+                            <td data-tit="카테고리">반품문의</td>
+                            <td data-tit="제목" class="text-left">
+                                <button type="button" class="btn btn-trans showDetailBtn">반품문의 합니다.</button>
+                            </td>
+                            <td data-tit="작성자">user2015</td>
+                            <td data-tit="작성일">2016-11-00 00:00:00</td>
+                        </tr>
+
+                        <tr class="none">
+                            <td colspan="5">
+                                <div class="bbs-contents">
+                                    귤 주문했는데 귤이 다 터지고 썩어서 왔어요.. 심지어 곰팡이까지..<br>
+                                    귤 반품 신청합니다. 빠른 처리 부탁드립니다.
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th data-tit="주문번호" class="text-center">EN987456321</th>
+                            <td data-tit="카테고리"><i class="fa fa-level-up fa-rotate-90"></i> 답변</td>
+                            <td data-tit="제목" class="text-left">
+                                <button type="button" class="btn btn-trans showDetailBtn">반품문의 합니다.</button>
+                            </td>
+                            <td data-tit="작성자">삿갓유통</td>
+                            <td data-tit="작성일">2016-11-00 00:00:00</td>
+                        </tr>
+
+                        <tr class="none">
+                            <td colspan="5">
+                                <div class="bbs-contents">
+                                    귤 주문했는데 귤이 다 터지고 썩어서 왔어요.. 심지어 곰팡이까지..<br>
+                                    귤 반품 신청합니다. 빠른 처리 부탁드립니다.
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="pt20"></div>
+
+                <div class="pagination-cs text-center">
+                    <strong>1</strong>
+                    <a href="notify_list.html">2</a>
+                    <a href="notify_list.html">3</a>
+                    <a href="notify_list.html">4</a>
+                    <a href="cs_write.html" class="btn btn-primary btn-lg float-right w100">글쓰기</a>
+                    <div class="clearfix"></div>
+                </div><!--// ed :  pagination -->
+                <div class="pt20"></div>
+
+                <!-- search list -->
+                <div class="search-form text-center">
+                <form id="Frm" name="" action="#">
+                    <select id="category" class="form-control inline w100">
+                        <option value="0" selected>제목</option>
+                        <option value="1">글쓴이</option>
+                        <option value="2">날짜</option>
+                    </select>
+                    <input type="text" id="searchWord" name="" class="form-control inline w200">
+                    <button type="submit" class="btn btn-primary btn-sm">검색</button> &nbsp;
+                    <label><input type="radio" id="and" name="type" checked> and</label> &nbsp;
+                    <label><input type="radio" id="or" name="type" > or</label>
+                </form>
+                </div><!--//ed :  search-form : list -->
+            </div><!--// ed : bbs-list : notify -->
+
+        </div><!-- //container-->
+    </section>
+<script type="text/javascript">
+    $('.showDetailBtn').bind("click",function () {
+        $(this).parent().parent().next().toggleClass('none');
+    })
+</script>

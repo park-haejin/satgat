@@ -1,0 +1,117 @@
+
+    <section>
+        <div class="container">
+
+            <div class="sub-title">
+                <h1><img alt="회원가입" src="/static/images/notify_h1.gif" style="width:100%;max-width: 486px"></h1>
+            </div>
+
+            <div class="sort-menu text-left noMg">
+                <a href="notify_list.html">공지사항</a>
+                <a href="cs_list.html" class="activate">1 : 1 센터</a>
+            </div><!--//sort -->
+
+            <div class="pt20"></div>
+            <div class="pt20"></div>
+
+            <form id="Frm" name="" action="#">
+                <div class="bbs-form form-box">
+                    <table class="table tbl text-left">
+                        <colgroup>
+                            <col style="width: 15%">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>제목</th>
+                            <td>
+                                <select class="form-control w200">
+                                    <option>선택해주세요</option>
+                                </select><div class="pt4"></div>
+                                <input type="text" name="" class="form-control" placeholder="반품 문의 합니다.">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>주문번호</th>
+                            <td>
+                                <input type="text" name="" class="form-control w250"> &nbsp; &nbsp;
+                                <button type="button" id="" name="" class="btn btn-primary w100 btn-sm noround">주문조회</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>이메일</th>
+                            <td>
+                                <input type="text" name="" class="form-control w250"> &nbsp; &nbsp;
+                                <label>
+                                    <input type="radio" id="email" name="callback" value=""> 답변수신을 이메일로 받겠습니다.
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>문자메세지</th>
+                            <td>
+                                <div class="w250 inline">
+                                    <input type="text" name="" class="form-control w70"> -
+                                    <input type="text" name="" class="form-control w70"> -
+                                    <input type="text" name="" class="form-control w70">
+                                </div>
+                                &nbsp; &nbsp;
+                                <label>
+                                    <input type="radio" id="sms" name="callback" value=""> 답변수신을 문자메세지로 받겠습니다.
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>내용</th>
+                            <td>
+                                <textarea class="form-control"></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>이미지</th>
+                            <td>
+                                <button type="button" id="" name="" class="btn btn-primary w100">이미지 첨부</button>
+                                <input type="file" id="" name="" class="form-control wp60">
+                                <div class="pt10"></div>
+                                * 파일은 최대 5개 까지 업로드 가능합니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <div class="bbs-form-prov  inline text-left">
+                                    <h4>개인정보수집 및 이용에 대한 안내</h4>
+                                    <p>
+                                        개인정보수집 및 이용에 대한 안내<br>
+                                        수집항목: 이름, 전화번호, 이메일주소<br>
+                                        수집목적: 상품문의 접수 및 결과 회신<br>
+                                        이용기간: 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다.<br>
+                                        단, 관께병령의 규정에 의하여 보전할 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.<br>
+                                        그 밖의 사항은 삿갓유통 개인정보 취급방침을 준수합니다.
+                                    </p>
+                                    <div class="text-center">
+                                        <label>
+                                            <input type="radio" id="agree" name="agreeChk">
+                                            동의합니다.
+                                        </label> &nbsp; &nbsp; &nbsp;
+                                        <label>
+                                            <input type="radio" id="agree" name="agreeChk">
+                                            동의하지 않습니다.
+                                        </label>
+                                    </div><div class="pt20"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-default btn-lg w100" onclick="history.back(-1)">취소하기</button>
+                        <button type="submit" class="btn btn-primary btn-lg w100">저장하기</button>
+                    </div>
+                </div>
+            </form>
+
+        </div><!-- //container-->
+    </section>

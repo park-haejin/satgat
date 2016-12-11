@@ -1,0 +1,222 @@
+//==  상단 타이틀
+.order-title {
+  border-bottom: 3px solid $brand-primary;
+  h1,h2 {
+    display: inline-block;
+    margin-bottom: 1px;
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    @media (max-width: $thema-mobile-width) {
+      margin: 0;
+       width: 50%;
+    }
+  }
+}
+
+//== 장바구니
+.order-cart {
+  //== table
+  .tbl th {
+    text-align: center;
+    input[type="checkbox"] {
+      height:16px;
+      width:16px;
+    }
+  }
+  .tbl th, .tbl td {
+    border-left: 0;
+    border-right: 0;
+    @media (max-width: $thema-mobile-width) {
+      border:1px solid #E7E7E7;
+    }
+  }
+  .tbl td.tbl-line 	{  border:1px solid #E7E7E7;  }
+  .tbl thead th {
+    height: 5em;
+  }
+  .tbl thead th {
+    font-size: 1.2em;
+    color: $gray;
+  }
+
+  //== element
+  p,.order-comp,  .order-cost  {
+    color:#A0A0A0;
+  }
+  .order-cart-photo{
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .fa-2x {
+    font-size: 1.8em;
+  }
+
+  //== total
+  .order-totalCost {
+    border-bottom: 1px solid $gray-light;
+    .order-cart-cost-tbl {
+      float: right;
+      width: 100%;
+      max-width: 300px;
+      padding: 1em 1em 0.8em;
+      background: $brand-primary;
+      color: #FFF;
+      @media (max-width: $thema-mobile-width) {
+        max-width: none;
+      }
+      table {
+        width: 100%;
+        th {
+          width: 40%;
+          font-weight: normal;
+          text-align: left;
+          padding-bottom: 0.5em;
+        }
+        td {
+          width: 60%;
+          text-align: right;
+        }
+        .order-cart-cost-tbl-total {
+          th,td {
+            padding-bottom: 0;
+            padding-top: 1.5em;
+          }
+          td {
+            font-size: 1.6em;
+            font-weight: bold;
+          }
+
+        }
+      }
+    }
+  }
+  //== control
+  @media (max-width: $thema-mobile-width) {
+    .btn-gray {
+      padding: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.order-submit {
+  .btn {
+    width: 100%;
+    max-width: 150px;
+    padding: 1em;
+    margin: 0 0.5em;
+    font-size: 1.2em;
+    @media (max-width: $thema-mobile-width) {
+      width: 49%;
+      max-width: none;
+      margin: 0;
+      &.btn-primary {
+        float: left;
+      }
+      &.btn-primary.btn-outline {
+        float: right;
+      }
+    }
+  }
+}
+
+//== 결제확정
+.payment-decision {
+  h4.strong {
+    color: #4C4C4C;
+    font-size: 2em !important;
+  }
+  th,td {
+    border-color:#ECECEC !important;
+  }
+  th {
+    color: #4C4C4C;
+  }
+  td {
+    color: #797979;
+  }
+}
+//== 결제완료
+.order-compelet {
+  .order-compelet-msg {
+    padding: 4em 0 3.2em;
+    h1 {
+      span.text-primary {
+        color: #306BCC;
+      }
+    }
+  }
+  .order-compelet-info {
+    .tbl th {
+      font-weight: bold;
+      vertical-align: top;
+    }
+    .tbl td {
+      line-height: 180%;
+      text-align: left;
+      font-size: 0.95em;
+      span.gray {  color: #999 !important;}
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      small {
+        display: block;
+        line-height: 160%;
+        font-size: 0.85em;
+
+      }
+    }
+  }
+  .order-cart-complete {
+    line-height: 120%;
+    .side-gap {
+      padding: 0 1em;
+    }
+    th,td {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid #FFF;
+    }
+    img {
+      width: 60px; height: 60px;
+    }
+    h5, p {
+      max-width: 200px;
+      line-height: 120%;
+      margin: 0;
+      padding: 0;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      font-size: 0.9em;
+    }
+    h5 {
+      margin-bottom: 4px;
+    }
+  }
+  .cost-info {
+   color:#999;
+    h3 {
+      margin: 0;
+      margin-top: -4px;
+    }
+  }
+  .order-compelet-point {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #000;
+    img {
+      vertical-align: middle;
+    }
+  }
+  hr {
+    border-color: #E5E5E5 ;
+  }
+}
+

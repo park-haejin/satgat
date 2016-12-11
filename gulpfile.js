@@ -52,6 +52,11 @@ gulp.task('PLUGINS:lib', function() {
         .pipe(gulp.dest(dist + '/static/lib/'));
 });
 
+//JS : site control
+gulp.task('JS:common', function() {
+    return gulp.src(paths.js+'/**/*.*')
+        .pipe(gulp.dest(dist + '/static/js/'));
+});
 // Fonts : 나눔바른고딕
 gulp.task('FONTS:webfont', function() {
     return gulp.src([
@@ -85,19 +90,32 @@ gulp.task('HTML:index', function () {
 
 // header + section + footer
 gulp.task('HTML:combine', function () {
-    return gulp.src(src+'/view/*/*.html')
+    return gulp.src([
+            src+'/view/*/*.html',
+           '!public/src/view/order/order_payment_translist.html'
+        ])
         .pipe(headerfooter.header(src+'/common/_header.html'))
         .pipe(headerfooter.footer(src+'/common/_footer.html'))
         .pipe(gulp.dest(dist + '/'));
 });
 
+// popup
+gulp.task('HTML:pop', function () {
+    return gulp.src([
+        'public/src/view/order/order_payment_translist.html'
+        ])
+    // .pipe(minifyhtml())
+        .pipe(gulp.dest(dist + '/pop/'));
+});
+
 // 파일 변경 감지
 gulp.task('watch', function () {
-  // gulp.watch(paths.js, ['PLUGINS:combine']);
+    gulp.watch(paths.js + '/*.js', ['JS:common']);
     gulp.watch(paths.scss + '/*.scss', ['SASS:compile']);
     gulp.watch(paths.scss + '/**/*.scss', ['SASS:compile']);
-    gulp.watch(paths.html, ['HTML:combine']);
+    gulp.watch(src + '/common/*.html', ['HTML:combine']);
+    gulp.watch(paths.html, ['HTML:combine','HTML:pop']);
 });
 
 //기본 task 설정
-gulp.task('default', [ 'server', 'PLUGINS:combine','PLUGINS:lib', 'FONTS:webfont' ,'SASS:compile', 'HTML:index', 'HTML:combine','IMAGES:common','watch']);
+gulp.task('default', ['JS:common', 'PLUGINS:combine','PLUGINS:lib', 'FONTS:webfont' ,'SASS:compile', 'HTML:index', 'HTML:combine','HTML:pop','IMAGES:common']);
