@@ -5,10 +5,10 @@
     <title>삿갓유통</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/static/css/fonts/awesome-bootstrap-checkbox.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <script type="text/javascript" src="/static/js/plug-in.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/fonts/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script type="text/javascript" src="../static/js/plug-in.js"></script>
 </head>
 <body>
 <div class="Wrap">
@@ -25,7 +25,7 @@
                 <div class="pc-topmenu">
                     <ul class="LBox">
                         <li>
-                            <a href="/" class="nav-btn homeBtn">HOME</a><!--
+                            <a href="../" class="nav-btn homeBtn">HOME</a><!--
                         --><button type="button" class="nav-btn cateBtn">카테고리</button>
                         </li>
                         <li class="searchBox">
@@ -108,6 +108,27 @@
                 </div><!--//pc topmenu  -->
                 <div class="mb-topmenu text-right">
                     <button type="button" class="btn listBtn"><i class="fa fa-bars"></i></button>
+                    <div id="mobile-menu" class="mobile-menu">
+                        <div class="mb-menu-view">
+                            <div class="side-head">
+                                <div class="user-photo">
+                                    <img alt="user" src="/static/images/member/sim-3.gif">
+                                </div>
+                                <h4 class="user-lv">VIP</h4>
+                                <h4 class="user-name">USER12345</h4>
+                                <button type="button" class="btn btn-trans closeSideMenuBtn"><i class="fa fa-close"></i></button>
+                            </div><div class="pt10"></div>
+                            <ul>
+                                <li><a href="../"><i class="fa fa-arrow-circle-right"></i> 홈</a> </li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right"></i> 카테고리메뉴</a> </li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right"></i>  삿갓우체국</a> </li>
+                                <li><a href="../cs/notify_list.html"><i class="fa fa-arrow-circle-right"></i>  고객센터</a> </li>
+                                <li><a href="../mypage/cart-my.html"><i class="fa fa-arrow-circle-right"></i>  장바구니</a> </li>
+                                <li><a href="../login"><i class="fa fa-arrow-circle-right"></i>  로그인</a> </li>
+                                <li><a href="../mypage/profile-myinfo.html"><i class="fa fa-arrow-circle-right"></i>  마이페이지</a> </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div><!--//moblie topmenu -->
             </nav><!--//navigation -->
 
@@ -116,17 +137,45 @@
     <section>
         <div class="container">
             <div class="sort-menu">
+                <a href="#" class="box-show-mb main-menu-slid-tg">전체보기</a>
+                <span class="box-show-pc inline">
                 <a href="#" class="activate">전체보기</a>
-                <a href="#">다이어트</a>
-                <a href="#">제철음식</a>
-                <a href="#">♥</a>
+                <a href="#">다이어터</a>
+                <a href="#">미식가</a>
+                <a href="#">요리사</a>
+                <a href="#">회사원</a>
+                <a href="#">건강원</a>
+                <a href="#">좋아요 ♥</a>
+                </span>
             </div><!--//sort -->
+            <div class="box-show-mb row nopadding main-menu-slid">
+                <div class="col-xs-4">
+                      <a href="#" class="activate">다이어터</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">미식가</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">요리사</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">회사원</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">건강원</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">좋아요 ♥</a>
+                </div>
+            </div>
+            <br>
+
             <div class="list">
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url(/static/images/sample-photo.jpg)">
                                 <div class="info">
                                     유럽토마토
@@ -134,17 +183,17 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
 
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
                                 <div class="info">
                                     유럽토마토
@@ -155,14 +204,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
                             <a href="/deals/deal_view.html"
                                style="background-image: url()">
@@ -172,9 +221,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href=".. /deals/deal_view.html"
                                style="background-image: url()">
                             </a>
                         </div>
@@ -185,7 +234,23 @@
             </div><!--//list -->
         </div>
     </section>
-<footer>
+<script type="text/javascript">
+    $('.main-menu-slid-tg').bind("click",function ( ) {
+        $('.main-menu-slid').slideToggle(200);
+    });
+
+    $('.main-menu-slid a').bind("click",function ( ) {
+        $('.main-menu-slid a').removeClass('activate');
+        $(this).addClass('activate');
+        $('.main-menu-slid-tg').html($(this).text() + " <small>▼</small>")
+    });
+
+    $(window).resize(function () {
+        if ( $(window).innerWidth() > 768 ) {
+            $('.main-menu-slid').hide();
+        }
+    })
+</script><footer>
     <div class="footer">
         <nav>
             <div class="footer-nav">
@@ -202,15 +267,16 @@
             </adress>
             <div class="footer-company-admin">개인정보취급방침 개인정보관리책임자 : 김인영(<a href="mailto:wmb2012@naver.com">wmb2012@naver.com</a>) | Powered by IDEAREPUBLIC</div>
             <div class="copyright">ⓒ2012 SATGAT MARKET, All rights reserved.</div>
-
+            <div class="text-center pt20">
+                <img alt="" src="../static/images/kcp_foot.gif" style="width: 100%; max-width: 288px">
+            </div>
         </div><!--//footer information -->
     </div>
 </footer>
 </div>
 <!-- common plug-in JS -->
-<script type="text/javascript" src="/static/js/app.js"></script>
+<script type="text/javascript" src="../static/js/app.js"></script>
 <script type="text/javascript">
-
 </script>
 </body>
 </html>

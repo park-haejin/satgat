@@ -2,17 +2,45 @@
     <section>
         <div class="container">
             <div class="sort-menu">
+                <a href="#" class="box-show-mb main-menu-slid-tg">전체보기</a>
+                <span class="box-show-pc inline">
                 <a href="#" class="activate">전체보기</a>
-                <a href="#">다이어트</a>
-                <a href="#">제철음식</a>
-                <a href="#">♥</a>
+                <a href="#">다이어터</a>
+                <a href="#">미식가</a>
+                <a href="#">요리사</a>
+                <a href="#">회사원</a>
+                <a href="#">건강원</a>
+                <a href="#">좋아요 ♥</a>
+                </span>
             </div><!--//sort -->
+            <div class="box-show-mb row nopadding main-menu-slid">
+                <div class="col-xs-4">
+                      <a href="#" class="activate">다이어터</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">미식가</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">요리사</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">회사원</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">건강원</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">좋아요 ♥</a>
+                </div>
+            </div>
+            <br>
+
             <div class="list">
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url(/static/images/sample-photo.jpg)">
                                 <div class="info">
                                     유럽토마토
@@ -20,17 +48,17 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
 
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
                                 <div class="info">
                                     유럽토마토
@@ -41,14 +69,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href="../deals/deal_view.html"
                                style="background-image: url()">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
                             <a href="/deals/deal_view.html"
                                style="background-image: url()">
@@ -58,9 +86,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-xs-4">
                         <div class="cell">
-                            <a href="/deals/deal_view.html"
+                            <a href=".. /deals/deal_view.html"
                                style="background-image: url()">
                             </a>
                         </div>
@@ -71,3 +99,20 @@
             </div><!--//list -->
         </div>
     </section>
+<script type="text/javascript">
+    $('.main-menu-slid-tg').bind("click",function ( ) {
+        $('.main-menu-slid').slideToggle(200);
+    });
+
+    $('.main-menu-slid a').bind("click",function ( ) {
+        $('.main-menu-slid a').removeClass('activate');
+        $(this).addClass('activate');
+        $('.main-menu-slid-tg').html($(this).text() + " <small>▼</small>")
+    });
+
+    $(window).resize(function () {
+        if ( $(window).innerWidth() > 768 ) {
+            $('.main-menu-slid').hide();
+        }
+    })
+</script>

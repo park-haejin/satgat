@@ -255,12 +255,78 @@ body {
 
     //== navigation : mobile top menu
     .mb-topmenu {
+      position: relative;
       display: none;
       height: 46px;
       line-height: 46px;
       padding: 0 10px;
+      z-index: 9999;
       .listBtn {
+        color:#FFF;
         font-size: 1.2em;
+        background:#242424;
+        &:hover {
+          color:$brand-warning;
+        }
+      }
+      // 모바일메뉴
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top:0; bottom: 0; left: 0; right: 0;
+        background:rgba(0,0,0,0.4);
+        z-index: 1001;
+        &.active {
+          display: block;
+          .mb-menu-view {
+            left: 0;
+          }
+        }
+        .mb-menu-view {
+          position: absolute;
+          left: -250px; bottom: 0;  top:0;
+          width: 250px;
+          background:#7199CE;
+          transition:  all 3s ease;
+          .side-head {
+            position: relative;
+            width: 210px;
+            margin: 0 auto;
+            padding: 2em 0 1em;
+            border-bottom:1px solid rgba(255,255,255,0.5);
+            text-align: center;
+            .user-photo {
+              width: 80px;
+              height: 80px;
+            }
+            .user-lv { padding: 0.2em 0; color: #FED702}
+            .user-name { color: #FFF}
+            .closeSideMenuBtn {
+              position: absolute;
+              top:0;  right: -1em;
+              font-size: 1.5em;
+              color: #FFF;
+            }
+          }
+          ul {
+            padding: 0;
+            list-style: none;
+            text-align: left;
+            a {
+              display: block;
+              padding:0  2em;
+              height: 36px;
+              line-height: 36px;
+              color: #FFF;
+              i {
+                margin-right: 0.5em;
+              }
+              &:hover {
+                color:$brand-warning;
+              }
+            }
+          }
+        }
       }
       @media (max-width: $thema-mobile-width) {
         display: block;
@@ -367,7 +433,7 @@ body {
       max-width: 1000px;
       border-bottom:1px solid #EEE ;
       margin-top: 49px;
-      margin-bottom: 36px;
+      margin-bottom: 6px;
       text-align: center;
       background: rgba(255,255,255,0.8);
       transition: all 0.5s  ease;
@@ -382,12 +448,19 @@ body {
         color: #505050;
         font-weight: bold;
         font-size: 1.2em;
+        text-decoration: none;
         &:hover {
           color: $brand-primary;
         }
         &.activate {
           color: $brand-primary;
           border-bottom:1px solid #6FADFF;
+        }
+        &.box-show-mb {
+          display: none;
+          @media (max-width: $thema-mobile-width) {
+            display: inline-block;
+          }
         }
       }
     }
@@ -481,6 +554,22 @@ body {
   }
 }
 
+
+@media (max-width: $thema-mobile-width) {
+  .list {
+    .row {
+      margin: 0 -6px;
+      .col-xs-4 {
+        padding: 2px;
+        .cell {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
+
 //==  숫자변경
 .box-amount {
   input[type="number"] {
@@ -504,4 +593,28 @@ body {
   width: 100%;
   height: 100%;
   box-shadow: inset rgba(0,0,0,0.8) 0 0 2px;
+}
+
+//== 메인 소메뉴
+.main-menu-slid {
+ display: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: -1px;
+  overflow: hidden;
+  a {
+    display: block;
+    position: relative;
+    left: -1px;
+    bottom: -1px;
+    padding: 1.5em 0;
+    text-align: center;
+    color:#444;
+    border-left: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    text-decoration: none;
+    &:hover, &.activate {
+      color: $brand-primary;
+    }
+  }
 }

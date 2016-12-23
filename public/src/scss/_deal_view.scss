@@ -1,3 +1,20 @@
+//==  섹션 메뉴
+.sort-menu.deal-vew {
+  box-sizing: border-box;
+  position: fixed;
+  top:46px;
+  z-index: 2;
+  @media (max-width: $thema-mobile-width) {
+    top:80px;
+    left: 0;
+    right: 0;
+  }
+}
+.disableTopBnr .sort-menu.deal-vew {
+  @media (max-width: $thema-mobile-width) {
+    top:28px;
+  }
+}
 
 //==  커뮤니티
 .box-chatt {
@@ -5,6 +22,7 @@
     margin-right: -1px;
   }
   @media (max-width: $thema-mobile-width) {
+    zoom: 0.5;
     & .line-right,& .line-left {
       margin: 0;
       border: 0;
@@ -182,6 +200,9 @@
 //== prod-header :  딜 캐러셀 및 상품가격정보, 구매 이벤트 처리
 .prod-header {
    padding-bottom: 10px;
+  @media (max-width: $thema-mobile-width) {
+    border-bottom:2px solid $gray-lighter;
+  }
   .prod-carousel {
     .fotorama {
       border:1px solid #CED0CD;
@@ -189,6 +210,7 @@
   }
   .prod-tbl {
     color:#707070;
+    margin: 0;
     th, td {
       padding: 1em 10px;
       padding-right: 0;
@@ -210,8 +232,12 @@
       }
     }
   }
+  .option-choice {
+    padding-right: 3px;
+  }
   .prod-buy-choiceBox {
-    padding-left: 10px;
+    padding-left: 11px;
+    padding-right:3px;
     .row {
       border: 1px solid #E6E6E6;
       padding: 1.2em 1em;
@@ -221,8 +247,73 @@
     padding: 0.2em 0 0.4em;
     padding-left: 10px;
   }
+
+
+}
+.fixedble {
+  position: relative;
   //== 상품 submit
   .prod-submit {
-    padding-left: 10px;
+    padding-left:8px;
+    .btn {
+      width: 100%;
+      padding: 0.5em 0;
+      text-align: center;
+    }
+    .row.nopadding [class*="col-xs-"] {
+      padding: 3px;
+    }
+    [class="col-xs-1"] {
+      width: 10%;
+    }
+    [class="col-xs-5"] {
+      width:40% ;
+    }
+  }
+
+
+  //모바일에선 fixed
+  @media (max-width: $thema-mobile-width) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .option-choice {
+      padding-right: 0;
+    }
+    .show-option {
+      margin-bottom: -2px;
+      .btn {
+        padding: 0;
+      }
+    }
+    .box-option {
+      display: none;
+      padding: 10px;
+      padding-bottom: 0;
+      background: #eee;
+      th {
+        display: none;
+      }
+      td {
+        padding: 0;
+      }
+    }
+    .prod-buy-choiceBox {
+      padding: 0;
+      background: #FFF;
+      .choiceBox-title {
+        padding-bottom: 10px;
+      }
+      .box-amount {
+        padding: 0;
+        text-align: left;
+      }
+    }
+    .prod-submit {
+      text-align: center;
+      padding:8px  8px;
+      background: #eee;
+    }
   }
 }

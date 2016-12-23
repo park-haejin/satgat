@@ -2,13 +2,13 @@
 <section>
     <div class="container">
 
-        <div id="sort-menu" class="sort-menu">
+        <div id="sort-menu" class="sort-menu deal-vew ">
             <a href="#deal_story" data-id="story">이야기</a>
             <a href="#deal_community" data-id="community">커뮤니티</a>
             <a href="#deal_buy" data-id="buy">구매하기</a>
         </div><!--//sort-menu -->
-
         <div class="pt20"></div>
+        <div class="pt75"></div>
         <!-- deal_story -->
         <div id="deal_story">
             <!-- pc 용 컨텐츠 보기 -->
@@ -36,7 +36,7 @@
             </form>
 
             <div class="row box-chatt">
-                <div class="col-sm-6 line-right">
+                <div class="col-xs-6 line-right">
                     <div class="pt75"></div>
                     <!-- buy customer -->
                     <div class="chatt-title text-center">
@@ -226,7 +226,7 @@
                 <!------------------------------------------------------------// ed : 샀다  --------------------------------------------------------------->
 
                 <!------------------------------------------------------------ 안 샀다  --------------------------------------------------------------->
-                <div class="col-sm-6  line-left">
+                <div class="col-xs-6  line-left">
                     <div class="pt75"></div>
                     <!-- stay customer -->
                     <div class="chatt-title text-center">
@@ -458,39 +458,70 @@
                                 <th>적립금</th>
                                 <td>100point</td>
                             </tr>
-                            <tr class="btm">
-                                <th>선택사항</th>
-                                <td>
-                                    <select class="form-control">
-                                        <option>선택사항1</option>
-                                        <option>선택사항2</option>
-                                    </select>
-                                </td>
-                            </tr>
                         </table>
-                        <div class="prod-buy-choiceBox">
-                            <div class="row nopadding">
-                                <div class="col-md-5 pt4">
-                                    선택사항1
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <div class="box-amount">
-                                        <button type="button" class="btn btn-default btn-sm  noround">-</button>
-                                        <input type="number" id="ch-1" name="" min="1" value="1" class="form-control btn-sm inline w50 noround">
-                                        <button type="button" class="btn btn-default btn-sm  noround">+</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-3  pt4  text-right">
-                                    3,400 원
-                                </div>
-                            </div>
-                        </div>
                         <h3 class="prod-lastcost"><strong>총 상품금액 : <span class="price">36,500</span> 원</strong></h3>
-                        <div class="prod-submit">
-                            <button type="button" class="btn btn-lg btn-default red noround prod-heartBtn"><i class="fa fa-heart-o"></i> </button>
-                            <button type="button" class="btn btn-lg btn-default blue noround w110 prod-reBtn"><strong>재입고 알림</strong></button>
-                            <button type="button" class="btn btn-lg btn-default blue noround w110 prod-cartBtn"><strong>장바구니</strong></button>
-                            <button type="submit" class="btn btn-lg btn-primary noround w210  prod-buyBtn"><strong>바로구매</strong></button>
+                            <div class="fixedble">
+                                <div class="box-show-mb show-option text-center">
+                                    <button type="button" class="btn btn-trans show-option-btn"><img alt="" src="../static/images/btn-top.png"></button>
+                                </div>
+
+                                <div class="box-option">
+                                    <div class="option-choice">
+                                        <table class="prod-tbl  table noline">
+                                            <colgroup>
+                                                <col style="width: 35%;">
+                                                <col style="width: 65%;">
+                                            </colgroup>
+                                            <tr class="btm">
+                                                <th>선택사항</th>
+                                                <td>
+                                                    <select class="form-control">
+                                                        <option>선택사항1</option>
+                                                        <option>선택사항2</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!--// ed : option-choice -->
+
+                                    <div class="pt5"></div>
+
+                                    <div class="prod-buy-choiceBox">
+                                        <div class="row nopadding">
+                                            <div class="col-md-5 pt4 choiceBox-title">
+                                                선택사항1
+                                            </div>
+                                            <div class="col-md-4 col-xs-6 text-center">
+                                                <div class="box-amount">
+                                                    <button type="button" class="btn btn-default btn-sm  noround">-</button>
+                                                    <input type="number" id="ch-1" name="" min="1" value="1" class="form-control btn-sm inline w50 noround">
+                                                    <button type="button" class="btn btn-default btn-sm  noround">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-xs-6  pt4  text-right">
+                                                3,400 원
+                                            </div>
+                                        </div>
+                                    </div><!--// ed : prod-buy-choiceBox -->
+
+                                </div><!--// ed : box-option -->
+
+                                <div class="prod-submit">
+                                    <div class="row nopadding">
+                                        <div class="col-xs-1">
+                                            <button type="button" class="btn btn-lg btn-default red noround prod-heartBtn"><i class="fa fa-heart-o"></i> </button>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <button type="button" class="btn btn-lg btn-default blue noround  prod-reBtn"><strong>재입고 알림</strong></button>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <button type="button" class="btn btn-lg btn-default blue noround  prod-cartBtn"><strong>장바구니</strong></button>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <button type="submit" class="btn btn-lg btn-primary noround   prod-buyBtn"><strong>바로구매</strong></button>
+                                        </div>
+                                    </div>
+                            </div>
                         </div>
                     </form>
                 </div><!-- //prod-buy-->
@@ -519,17 +550,18 @@
         </div><!-- //container-->
     </div>
 </section>
-<script type="text/javascript" src="/static/lib/scrolltofixed/jquery-scrolltofixed-min.js"></script>
+<!--<script type="text/javascript" src="/static/lib/scrolltofixed/jquery-scrolltofixed-min.js"></script>-->
 <script type="text/javascript">
 
    /*== == == == tab menu  ==== == == == */
     //중간메뉴 : id == sort-menu
     //중간 메뉴 : fixed
-    $(document).ready(function() {
-        $('#sort-menu').scrollToFixed( {
-            marginTop: 46
-        });
-    });
+//    $(document).ready(function() {
+//        $('#sort-menu').scrollToFixed( {
+//            marginTop: 46,
+//            zIndex:1
+//        });
+//    });
 
     //중간메뉴 :  선택시 해당 섹션으로 이동
     var chkPointTop = [];
@@ -675,5 +707,10 @@
    //바로구매
    $('.prod-buyBtn').bind("click",function( ) {
        $(location).attr("href","../order/order_payment.html");
+   });
+
+    //== 모바일 옵션 선택
+   $('.show-option-btn').bind("click",function( ) {
+       $('.box-option').slideToggle("fast");
    });
 </script>
