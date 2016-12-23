@@ -1,0 +1,109 @@
+<section>
+    <div class="container">
+        <div class="sort-menu">
+            <span class="box-show-pc inline">
+                <a href="#" class="activate">삿갓우체국</a>
+                </span>
+        </div><!--//sort -->
+        <br>
+
+        <div class="list">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url(/static/images/sample-photo.jpg)">
+                        </a>
+                        <div class="info-post">
+                            유럽토마토
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url()">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url()">
+                        </a>
+                        <div class="info-post">
+                            유럽토마토
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url()">
+                        </a>
+                        <div class="info-post">
+                            유럽토마토
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url()">
+                        </a>
+                        <div class="info-post">
+                            유럽토마토
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="cell">
+                        <a href="post_view.html"
+                           style="background-image: url()">
+                        </a>
+                        <div class="info-post">
+                            유럽토마토
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!--//list -->
+    </div>
+</section>
+
+
+<!-- Modal : 상세 -->
+<div id="post-view" class="modal fade  Pop-Wrap" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">삿갓우체국</h3>
+
+
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-lg btn-default text-primary w100 cancelbtn" data-dismiss="modal">확인</button>
+            </div>
+        </div>
+
+    </div>
+</div><!--// ed :  Modal : 상세 -->
+
+<script type="text/javascript">
+    $('.list').on("click",".cell a",function ( e) {
+        $('#post-view').modal('show')
+        e.preventDefault();
+    });
+</script>
