@@ -261,12 +261,19 @@ body {
       line-height: 46px;
       padding: 0 10px;
       z-index: 9999;
-      .listBtn {
-        color:#FFF;
-        font-size: 1.2em;
-        background:#242424;
+      background: #FFF;
+      .btn {
+        position: relative;
+        color:#000;
+        font-size: 1.5em;
         &:hover {
           color:$brand-warning;
+        }
+        .badge {
+          position: absolute;
+          top:-2px;
+          right: -2px;
+          background: $brand-danger;
         }
       }
       // 모바일메뉴
@@ -439,7 +446,7 @@ body {
       transition: all 0.5s  ease;
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
-        margin-bottom: 36px;
+        margin-bottom: 0;
       }
       a {
         display: inline-block;
@@ -469,6 +476,9 @@ body {
     .list {
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
+        [class*="col-xs-"] {
+          padding:3px;
+        }
       }
       .cell {
         position: relative;
@@ -495,13 +505,26 @@ body {
           background-repeat:no-repeat ;
           background-position:center center ;
           background-size: cover ;
+          //@media (max-width: $thema-mobile-width) {
+          //  padding-top: 100%;
+          //}
           .info {
             position: absolute;
             left: 0; right: 0; bottom:0;
-            padding: 1em 0.5em;
+            padding: 0.6em 0.5em;
+            line-height: 100%;
             text-align: center;
             color: #FFF;
-            background: rgba(0,0,0,0.7);
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: rgba(0,0,0,0.4);
+            @media (max-width: $thema-mobile-width) {
+              padding: 4px 0.5em;
+              font-size:6px;
+              //display: none;
+            }
           }
         }
         .info-post {
@@ -604,11 +627,17 @@ body {
 
 //== 메인 소메뉴
 .main-menu-slid {
- display: none;
+  display: none;
   position: relative;
   width: 100%;
   margin-bottom: -1px;
   overflow: hidden;
+  .topbox {
+    position: relative;
+    bottom:-2px;
+    height: 36px;
+    background: #FFF;
+  }
   a {
     display: block;
     position: relative;
@@ -618,7 +647,7 @@ body {
     text-align: center;
     color:#444;
     border-left: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
+    border-top: 1px solid #EEE;
     text-decoration: none;
     &:hover, &.activate {
       color: $brand-primary;

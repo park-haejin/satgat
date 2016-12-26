@@ -92,8 +92,7 @@ gulp.task('HTML:index', function () {
 gulp.task('HTML:combine', function () {
     return gulp.src([
             src+'/view/*/*.html',
-           '!public/src/view/order/order_payment_translist.html',
-            '!public/src/view/cs/post_view.html'
+           '!public/src/view/order/order_payment_translist.html'
         ])
         .pipe(headerfooter.header(src+'/common/_header.html'))
         .pipe(headerfooter.footer(src+'/common/_footer.html'))

@@ -1,37 +1,284 @@
-<!-- pop--><!DOCTYPE html>
-<html lang="kor">
-<head>
-    <meta charset="UTF-8">
-    <title>삿갓유통</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/static/css/fonts/awesome-bootstrap-checkbox.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <script type="text/javascript" src="/static/js/plug-in.js"></script>
-</head>
-<body>
-<div class="Pop-Wrap">
-    <div class="pt20"></div>
-        sdafas
-        <button type="button" class="btn btn-lg btn-default delBtn">선택삭제</button>
-    </div><!--// ed : bbs-list-->
-</div>
+<link rel="stylesheet" type="text/css" href="/static/lib/fotorama/fotorama.css">
+<section>
+    <div class="container">
+        <div class="satgat-post">
+
+            <!-- 타이틀 -->
+            <div class="post-title">
+                <span>vol.05</span>
+            </div>
+
+            <!-- 간략정보 -->
+            <div class="post-info">
+                <span>WMB We Make Buzz</span> |
+                <span>삿갓유통</span> |
+                <span>sgmarket news</span> |
+                <span>wmb2012@naver.com</span> |
+                <span>T.1544-6930 F.032-714-3275</span> |
+                <span>www.sgmarket.kr</span>
+            </div>
+
+            <!-- 대표사진 -->
+            <div class="post-photo">
+                <img alt="" src="/static/images/sample-post.jpg">
+            </div>
+
+            <div class="post-inside">
+                <!-- post contents -->
+                <div class="post-name">
+                    <h1>비내리는 감귤 농장</h1>
+                </div>
+                <div class="post-contents ">
+날씨 복 좋은 삿갓유통 총각들인데 이번 제주도 출장에는 비가 내렸습니다.
+                    출장으로 내려간 제주도여서 날씨가 야속하긴 했지만,  비오는 날도 있어야 열매도 잘 크는법!
+                    긍정적으로 생각하고 농장으로 찾아갔습니다.
+
+
+                    <img alt="" src="/static/images/smaple-post-2.jpg" style="width:100%; max-width: 600px ">
+
+
+                    올 해 감귤이 이렇게나 많이 달렸습니다 ~ ^-^
+                    물론 미리 따서 왁스칠을 하지 않고 있고요!
+                    나무에서 맛있게 익을 때까지 기다린 후에 수확해서 바로 보내드리고 있습니다.
+                </div>
+            </div><!--// ed : post contents -->
+
+            <!-- post comment -->
+            <div  id="commetn-form-buy"  class="chatt-box-form">
+                <table class="chatt-from  comment-btn">
+                    <tr>
+                        <td style="width: 80px">
+                            <!-- user photo -->
+                            <div class="user-photo">
+                                <img alt="" src="/static/images/member/sim-1.gif"
+                            </div>
+                        </td>
+                        <td style="width: *">
+                            <input type="text" id="" name="" class="form-control"  placeholder="상품이 마음에 드셧나요? 솔직한 구매후기를 남겨주세요"></input>
+                        </td>
+                        <td style="width: 55px">
+                            <button type="button" class="btn btn-default btn-lg submitBtn"><img alt="입력" src="/static/images/ico-pen.gif"></button>
+                        </td>
+                    </tr>
+                </table><!--// chatt-from -->
+
+                <!-- 댓글 추가  -->
+                <table class="chatt-from comment-regi none">
+                    <tr>
+                        <td style="width: 80px">
+                            <!-- user photo -->
+                            <div class="user-photo">
+                                <img alt="" src="/static/images/member/sim-1.gif"
+                            </div>
+                        </td>
+                        <td style="width: *">
+                            <div class="comment-regi-box">
+                                <div>
+                                    <div class="float-left">userid</div>
+                                    <small class="float-right">작성중</small><div class="clearfix">
+                                </div>
+                                    <textarea id="" name="" placeholder="상품이 마음에 드셧나요? 솔직한 구매후기를 남겨주세요"></textarea>
+                                    <div>
+                                        <div class="float-left filebox">
+                                            <label for="ex_file"><img alt="업로드" src="/static/images/ico-file.gif"></label>
+                                            <input type="file" id="ex_file">
+                                        </div>
+                                        <div class="float-right">
+                                            <button type="button" class="btn btn-default btn-sm w80 cancelCommentBtn">취소</button>
+                                            <button type="submit" class="btn btn-primary btn-sm w80 regiCommentBtn">저장</button>
+                                        </div><div class="clearfix"></div>
+                                    </div>
+
+                                </div>
+                        </td>
+                    </tr>
+                </table><!--// ed : 댓글 입력 chatt-from -->
+            </div>
+
+            <!-- 샀다 댓글리스트 -->
+            <ul class="box-chatting">
+
+                <!-- 사용자 댓글 -->
+                <li class="chatt-customer ">
+
+                    <div class="row nopadding">
+                        <div class="col-xs-2 text-center">
+
+                            <!-- user 사진 -->
+                            <div class="user-photo">
+                                <img alt="" src="/static/images/member/sim-1.gif">
+                            </div><!--//user photo -->
+
+                        </div>
+                        <div  class="col-xs-10">
+                            <div class="box-chatting-commet">
+                                <!-- user 기본정보 -->
+                                <ul class="LBox">
+                                    <li>
+                                        <h4>User</h4>
+                                    </li>
+                                    <li class="li_R">
+                                            <span class="date">
+                                                ( 2016-00-00 00:00:00)
+                                            </span>
+                                        <button type="button" class="btn btn-trans btn-sm commentSetBtn"><i class="fa fa-ellipsis-v"></i> </button>
+
+                                        <!-- 댓글 수정 컨트롤  -->
+                                        <div class="box-chatting-edit none">
+                                            <button type="button" data-id="regi"  class="btn btn-default btn-sm wp100 commentBtn">댓글쓰기</button>
+                                            <button type="button" data-id="modi" class="btn btn-default btn-sm wp100 modiBtn">수정</button>
+                                            <button type="button" class="btn btn-default btn-sm wp100 delBtn">삭제</button>
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+                                <!-- 댓글 -->
+                                <div class="fotorama" data-width="100%" data-fit="contain">
+                                    <img alt="" src="/static/images/sample-photo.jpg">
+                                    <img alt="" src="/static/images/sample-photo.jpg">
+                                </div><div class="pt6"></div>
+                                <div class="box-chatting-commet-con">처음으로 청귤구매해서 청을 담갔는데요~
+
+                                    생각보다 알이 작고 노란것도 있고 그래서 약간은 실망을 했긴 했는데 그래도 믿을 만하니 맛나게 청귤청담가 맛있게 먹겠습니다~
+                                </div><!--//  ed : 댓글 -->
+
+                                <!-- 댓글 수정 -->
+                                <div class="chatt-from commont-modi  none">
+                                    <textarea id="" name="" placeholder=""></textarea>
+                                    <div>
+                                        <div class="float-left filebox">
+                                            <label for="ex_file"><img alt="업로드" src="/static/images/ico-file.gif"></label>
+                                            <input type="file" id="ex_file">
+                                        </div>
+                                        <div class="float-right">
+                                            <button type="button" class="btn btn-default btn-sm w80 cancelCommentModiBtn">취소</button>
+                                            <button type="submit" class="btn btn-primary btn-sm w80 commentRegiBtn">댓글달기</button>
+                                            <button type="submit" class="btn btn-warning btn-sm w80 commentModiBtn">수정</button>
+                                        </div><div class="clearfix"></div>
+                                    </div>
+                                </div><!--// ed :  댓글 수정 chatt-from -->
+                            </div>
+
+
+
+                        </div><!--//box-chatting-commet -->
+                    </div>
+                </li><!--//  ed : 사용자 댓글 -->
+
+
+                <!-- 관리자 댓글 -->
+                <li class="chatt-helper">
+                    <div class="row nopadding">
+                        <div class="col-xs-3 text-center">
+                            <div class="user-photo">
+                                <img alt="" src="/static/images/sim-satgat.gif">
+                            </div><!--//user photo -->
+                        </div>
+                        <div  class="col-xs-9">
+                            <div class="box-chatting-commet">
+                                <ul class="LBox">
+                                    <li>
+                                        <h4>삿갓유통</h4>
+                                    </li>
+                                    <li class="li_R">
+                                            <span class="date">
+                                                ( 2016-00-00 00:00:00)
+                                            </span>
+                                        <button type="button" class="btn btn-trans btn-sm commentSetBtn"><i class="fa fa-ellipsis-v"></i> </button>
+                                        <div class="box-chatting-edit none">
+                                            <button type="button" class="btn btn-default btn-sm wp100 modiBtn">수정</button>
+                                            <button type="button" class="btn btn-default btn-sm wp100 delBtn">삭제</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- 댓글 -->
+                                <div class="box-chatting-commet-con">처음으로 청귤구매해서 청을 담갔는데요~
+
+                                    생각보다 알이 작고 노란것도 있고 그래서 약간은 실망을 했긴 했는데 그래도 믿을 만하니 맛나게 청귤청담가 맛있게 먹겠습니다~
+                                </div><!--// 댓글 -->
+
+                                <!-- 댓글 수정 -->
+                                <div class="chatt-from commont-modi  none">
+                                        <textarea id="" class="innerBd" name="" placeholder="">처음으로 청귤구매해서 청을 담갔는데요~
+
+생각보다 알이 작고 노란것도 있고 그래서 약간은 실망을 했긴 했는데 그래도 믿을 만하니 맛나게 청귤청담가 맛있게 먹겠습니다~</textarea>
+                                    <div>
+                                        <div class="float-left filebox">
+                                            <label for="ex_file"><img alt="업로드" src="/static/images/ico-file.gif"></label>
+                                            <input type="file" id="ex_file">
+                                        </div>
+                                        <div class="float-right">
+                                            <button type="button" class="btn btn-default btn-sm w80 cancelCommentModiBtn">취소</button>
+                                            <button type="submit" class="btn btn-primary btn-sm w80 commentRegiBtn">댓글달기</button>
+                                            <button type="submit" class="btn btn-warning btn-sm w80 commentModiBtn">수정</button>
+                                        </div><div class="clearfix"></div>
+                                    </div>
+                                </div><!--// ed :  댓글 수정 chatt-from -->
+
+                            </div>
+                        </div><!--//box-chatting-commet -->
+                    </div>
+                </li>
+            </ul><!--// ed : 샀다 댓글리스트 - box-chatting : list -->
+
+
+
+        </div>
+   </div>
+    </section>
 <script type="text/javascript">
-    $(function () {
+    /*== == == == 커뮤니티  ==== == == == */
+    //== 기본 입력창
+    //댓글입력 :  상단기본등록
+    $('.comment-btn').bind("click",function(){
+        $(this).toggleClass('none')
+        $(this).next().toggleClass('none')
+    })
 
-        //== 전체 선택 toggle
-        $('#allchk').bind("click", function () {
-            var chkStatus  = this.checked;
-            $('input[name="cartchk"]').prop("checked", chkStatus);
-        });
+    //댓글취소 : 상단기본등록
+    $('.cancelCommentBtn').bind("click",function(){
+        $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.comment-btn').toggleClass('none')
+        var regitg = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.comment-regi');
+        regitg.toggleClass('none')
+        regitg.find('textarea').val("");
+    });
 
-        //== 선택버튼
-        $('.bbs-list').on("click",'.choiceBtn',function (e){
-            $(opener.document).abc();
-        } );
+    //댓글 submit
+    $(".submitBtn").bind("click", function (e)  {
+        $('#commentFrm input[name="comment"]').val($(this).parent().prev().find("textarea").val())
+        $('#commentFrm').submit();
+    })
+
+    //== 선택댓글 입력창
+    //선택댓글의 셋팅버튼 열기
+    $('.box-chatting').on("click",".commentSetBtn", function (e)  {
+        $(this).next().toggleClass('none');
+    });
+
+    //댓글 쓰기 :  입력창 열기
+    $('.box-chatting').on("click",".commentBtn", function (e)  {
+        $(this).parent().addClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from .commentRegiBtn').removeClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from .commentModiBtn').addClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from').removeClass('none');
+    })
+
+    //선택댓글 수정 :  입력창 열기
+    $('.box-chatting').on("click",".modiBtn", function (e)  {
+        $(this).parent().addClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from .commentRegiBtn').addClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from .commentModiBtn').removeClass('none');
+        $(this).parent().parent().parent().parent().find('.chatt-from').removeClass('none');
+    })
+
+    //선택댓글 삭제
+    $('.box-chatting').on("click",".delBtn", function (e)  {
 
     })
+
+    //선택댓글  입력창 닫기
+    $('.box-chatting').on("click",".cancelCommentModiBtn",function(){
+        $(this).parent().parent().parent().parent().find('.chatt-from').toggleClass('none');
+    });
 </script>
-</body>
-</html><!-- pop-->

@@ -1,6 +1,6 @@
 //font
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 //bootstraps
 //@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";//환경변수
 @import "vars";//환경변수 custom
@@ -16,6 +16,7 @@
 @import "order";
 @import "bbs";
 @import "my";
+@import "post";
 @import "pop";
 
 
