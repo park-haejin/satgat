@@ -92,7 +92,8 @@ gulp.task('HTML:index', function () {
 gulp.task('HTML:combine', function () {
     return gulp.src([
             src+'/view/*/*.html',
-           '!public/src/view/order/order_payment_translist.html'
+           '!public/src/view/order/order_payment_translist.html',
+            '!public/src/view/member/login_pop.html'
         ])
         .pipe(headerfooter.header(src+'/common/_header.html'))
         .pipe(headerfooter.footer(src+'/common/_footer.html'))
@@ -102,11 +103,11 @@ gulp.task('HTML:combine', function () {
 // popup
 gulp.task('HTML:pop', function () {
     return gulp.src([
-        'public/src/view/order/order_payment_translist.html',
-        'public/src/view/cs/post_view.html'
+        src+'/view/*/order_payment_translist.html',
+        src+'/view/*/login_pop.html'
         ])
     // .pipe(minifyhtml())
-        .pipe(gulp.dest(dist + '/pop/'));
+        .pipe(gulp.dest(dist + '/'));
 });
 
 // 파일 변경 감지
