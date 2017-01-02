@@ -257,22 +257,23 @@ body {
     .mb-topmenu {
       position: relative;
       display: none;
-      height: 46px;
+      height: 50px;
       line-height: 46px;
       padding: 0 10px;
       z-index: 9999;
       background: #FFF;
       .btn {
         position: relative;
-        color:#000;
-        font-size: 1.5em;
-        &:hover {
-          color:$brand-warning;
-        }
         .badge {
           position: absolute;
-          top:-2px;
-          right: -2px;
+          top:4px;
+          right: 4px;
+          width: 16px;
+          height: 16px;
+          padding: 0;
+          padding-top: 4px;
+          text-align: center;
+          border-radius: 50%;
           background: $brand-danger;
         }
       }
@@ -281,7 +282,7 @@ body {
         display: none;
         position: fixed;
         top:0; bottom: 0; left: 0; right: 0;
-        background:rgba(0,0,0,0.4);
+        background:rgba(0,0,0,0.1);
         z-index: 1001;
         &.active {
           display: block;
@@ -291,28 +292,46 @@ body {
         }
         .mb-menu-view {
           position: absolute;
-          left: -250px; bottom: 0;  top:0;
-          width: 250px;
-          background:#7199CE;
+          left: -270px; bottom: 0;  top:0;
+          width: 270px;
+          background:#FFF;
           transition:  all 3s ease;
+          .col-xs-5 {
+            width: 34%;
+          }
+          .col-xs-7 {
+            width: 66%;
+          }
           .side-head {
             position: relative;
-            width: 210px;
             margin: 0 auto;
-            padding: 2em 0 1em;
-            border-bottom:1px solid rgba(255,255,255,0.5);
+            padding: 2em  0.5em 1em;
+            border-bottom:1px solid $gray-lighter;
             text-align: center;
             .user-photo {
+              margin: 0 auto;
               width: 80px;
               height: 80px;
+              border: 6px solid #555;
+              &.vip {
+                border-color: #FDD40B;
+              }
             }
-            .user-lv { padding: 0.2em 0; color: #FED702}
-            .user-name { color: #FFF}
+            .edit-profile {
+              display: block;
+              width: 100%;
+              padding: 0.2em 0;
+              text-align: center;
+            }
+            .user-lv { padding-top: 1em; color: #FED702}
+            .user-name { padding-top: 0.2em}
             .closeSideMenuBtn {
               position: absolute;
-              top:0;  right: -1em;
-              font-size: 1.5em;
-              color: #FFF;
+              top:12px;  right: 5px;
+              .head-ico {
+                width: 24px;
+                height: 24px;
+              }
             }
           }
           ul {
@@ -322,14 +341,11 @@ body {
             a {
               display: block;
               padding:0  2em;
-              height: 36px;
-              line-height: 36px;
-              color: #FFF;
-              i {
-                margin-right: 0.5em;
-              }
+              height: 50px;
+              line-height: 50px;
+              color: $gray;
               &:hover {
-                color:$brand-warning;
+                background: #F7F7F7;
               }
             }
           }
@@ -420,6 +436,10 @@ body {
     }
     @media (max-width: $thema-mobile-width) {
       padding: 90px  1em 20px;
+      &.no-side {
+        padding-left: 0;
+        padding-right: 0;
+      }
       &.top-intro {
         padding-top: 0;
       }
@@ -438,7 +458,7 @@ body {
     .sort-menu {
       width: 100%;
       max-width: 1000px;
-      border-bottom:1px solid #EEE ;
+      border-bottom:2px solid #EEE ;
       margin-top: 49px;
       margin-bottom: 6px;
       text-align: center;
@@ -451,8 +471,8 @@ body {
       a {
         display: inline-block;
         margin: 34px 15px 0;
-        padding-bottom: 15px;
-        color: #505050;
+        padding-bottom: 10px;
+        color: #818181;
         font-weight: bold;
         font-size: 1.2em;
         text-decoration: none;
@@ -466,7 +486,10 @@ body {
         &.box-show-mb {
           display: none;
           @media (max-width: $thema-mobile-width) {
+            width: 33%;
+            font-size: 14px;
             display: inline-block;
+            border-bottom: 2px solid #7199CE;
           }
         }
       }
@@ -476,8 +499,12 @@ body {
     .list {
       @media (max-width: $thema-mobile-width) {
         margin: 0 ;
+        padding: 0 1.5px;
+        .row {
+          margin: 0;
+        }
         [class*="col-xs-"] {
-          padding:3px;
+          padding:1.5px;
         }
       }
       .cell {
@@ -505,9 +532,9 @@ body {
           background-repeat:no-repeat ;
           background-position:center center ;
           background-size: cover ;
-          //@media (max-width: $thema-mobile-width) {
-          //  padding-top: 100%;
-          //}
+          @media (max-width: $thema-mobile-width) {
+            padding-top: 100%;
+          }
           .info {
             position: absolute;
             left: 0; right: 0; bottom:0;
@@ -550,7 +577,7 @@ body {
     color:#808080;
     box-sizing: border-box;
     @media (max-width: $thema-mobile-width) {
-      padding: 30px 2em ;
+      padding: 20px 2em 30px;
     }
     .footer-nav {
       padding-bottom: 16px;
@@ -563,8 +590,35 @@ body {
         &:hover {
           color:$brand-info;
         }
+        @media (max-width: $thema-mobile-width) {
+          margin: 0;
+        }
       }
     }
+  }
+}
+
+.head-ico {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-position:center  ;
+  background-repeat:no-repeat ;
+  background-size:contain ;
+  &.head-nav {
+    background-image: url(/static/images/ico-nav.png);
+  }
+  &.head-home {
+    background-image: url(/static/images/ico-home.png);
+  }
+  &.head-search {
+    background-image: url(/static/images/ico-search.png);
+  }
+  &.head-cart {
+    background-image: url(/static/images/ico-cart.png);
+  }
+  &.head-close {
+    background-image: url(/static/images/ico-close.png);
   }
 }
 
@@ -628,10 +682,13 @@ body {
 //== 메인 소메뉴
 .main-menu-slid {
   display: none;
-  position: relative;
+  position: absolute;
   width: 100%;
   margin-bottom: -1px;
   overflow: hidden;
+  z-index: 1;
+  background: #FFF;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.5);
   .topbox {
     position: relative;
     bottom:-2px;
@@ -641,13 +698,12 @@ body {
   a {
     display: block;
     position: relative;
-    left: -1px;
-    bottom: -1px;
+    right: -1px;
     padding: 1.5em 0;
     text-align: center;
     color:#444;
-    border-left: 1px solid #EEE;
-    border-top: 1px solid #EEE;
+    border-right: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
     text-decoration: none;
     &:hover, &.activate {
       color: $brand-primary;
