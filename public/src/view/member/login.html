@@ -4,23 +4,68 @@
 
             <div class="login-box">
                 <h1>로그인</h1>
+                <div class="chkmember">
+                    <button type="button" class="btn btn-check-member btn-trans">
+                        <i class="fa fa-check-circle-o"></i> 회원
+                    </button>
+                    <button type="button" class="btn btn-check-nomember btn-trans">
+                        <i class="fa fa-circle-o"></i> 비회원 배송조회
+                    </button>
+                </div>
                 <form id="Frm" name="" action="/login" method="post" >
-
-                    <p><input type="text" name="loginId" placeholder="아이디" class="form-control noround"></p>
-                    <p><input type="password" name="password" placeholder="비밀번호" class="form-control noround"></p>
-                    <div class="login-box-link">
-                        <label><input type="checkbox" id="" name=""> 아이디 저장하기</label> |
-                        <a href="#"> 패스워드를 잊어버리셧나요?</a>
+                    <div class="member active">
+                        <p><input type="text" name="loginId" placeholder="아이디" class="form-control noround"></p>
+                        <p><input type="password" name="password" placeholder="비밀번호" class="form-control noround"></p>
+                        <div class="login-box-link">
+                            <label><input type="checkbox" id="" name=""> 아이디 저장하기</label>
+                            <a href="#" class="float-right">비밀번호를 잊어버리셧나요?</a>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="pt10">
+                            <button type="submit" class="btn btn-lg btn-primary btn-submit"><strong>로그인</strong></button>
+                        </div>
                     </div>
-                    <div class="pt10">
-                        <button type="submit" class="btn btn-lg btn-primary btn-submit">로그인</button>
+                    <div class="nomember">
+                        <h4>주문자 정보입력</h4>
+                        <p>비회원으로 주문하시는 경우 쿠폰 및 포인트는 지급하지 않습니다.</p>
+
+                        <p><input type="text" name="loginId" placeholder="아이디" class="form-control noround"></p>
+                        <p><input type="password" name="password" placeholder="비밀번호" class="form-control noround"></p>
                     </div>
                 </form>
-                <br/>
+                <br>
                 <div class="text-center">
                     <a href="/member/join" >회원가입</a>
                 </div>
-            </div>
+                <div class="row kakaobox">
+                    <div class="col-xs-4 text-right">
+                        <img alt="kakao" src="/static/images/ico-kakao.png" class="ico-kakao">
+                    </div>
+                    <div class="col-xs-8">
+                        <p>카카오톡 <strong>@삿갓유통</strong>을 등록 후<br>
+                        도움을 요청해 보세요</p>
+                        <button type="button" class="btn btn-kakao">
+                            카카오톡 친구 추가하기
+                        </button>
+                    </div>
+                </div>
+            </div><br><br>
 
         </div><!-- //container-->
     </section>
+<script type="text/javascript">
+    //회원 활성화
+    $(".btn-check-member").bind("click",function(e){
+        $(this).find("i").removeClass('fa-circle-o').addClass("fa-check-circle-o");
+        $(".btn-check-nomember").find("i").removeClass('fa-check-circle-o').addClass("fa-circle-o");
+        $(".member").addClass("active");
+        $(".nomember").removeClass("active");
+    }) ;
+    //비회원 활성화
+    $(".btn-check-nomember").bind("click",function(e){
+        $(this).find("i").removeClass('fa-circle-o').addClass("fa-check-circle-o");
+        $(".btn-check-member").find("i").removeClass('fa-check-circle-o').addClass("fa-circle-o");
+        $(".nomember").addClass("active");
+        $(".member").removeClass("active");
+    }) ;
+</script>
