@@ -152,24 +152,24 @@ body {
           }
         }
         @media (max-width: 1240px) {
-          width: 38%;
+          width: 34%;
         }
         @media (max-width: 1040px) {
-          width: 34%;
+          width: 30%;
           & #searchCommonFrm input {
             width: 84%;
           }
         }
         @media (max-width: 970px) {
-          width: 28%;
+          width: 24%;
           & #searchCommonFrm input {
-            width: 80%;
+            width: 76%;
           }
         }
         @media (max-width: 800px) {
-          width: 25%;
+          width: 21%;
           & #searchCommonFrm input {
-            width: 76%;
+            width: 72%;
           }
         }
       }
