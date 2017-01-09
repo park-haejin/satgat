@@ -90,6 +90,9 @@ body {
         background: #333;
         box-sizing: border-box;
         transition: padding 0.5s ;
+        img {
+          vertical-align: middle;
+        }
         &:hover {
           color: #FFF;
         }
@@ -172,6 +175,24 @@ body {
       }
       @media (max-width: $thema-mobile-width) {
         display: none;
+      }
+      //== 로그인 버튼
+      .loginBtn {
+        border: 1px solid #FFF;
+        border-radius: 4px;
+        padding-left: 14px;
+        padding-right: 14px;
+        color: #FFF;
+        background: transparent;
+        &:active {
+          color: #84B2E0;
+          background: rgba(0,0,0,0.5);
+        }
+      }
+      .memberBtn {
+        border-radius: 4px;
+        color: #FFF;
+        background: #84B2E0;
       }
       //== user
       .userBtn {

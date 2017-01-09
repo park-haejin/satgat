@@ -15,11 +15,12 @@ var app = {
             });
             //로그인 : 바로가기
             $('.loginBtn').bind("click",function(e){
-                //$(location).attr("href","#");
-                $.get( "/member/login_pop.html", function( data ) {
-                    $('#modal-box').html( data );
-                    $('#modal-box').modal('show');
-                });
+                //var url = $(this).attr("data-href");
+                //$(location).attr("href",url);href
+                // $.get( "/member/login_pop.html", function( data ) {
+                //     $('#modal-box').html( data );
+                //     $('#modal-box').modal('show');
+                // });
             });
 
             //회원가입 : 바로가기

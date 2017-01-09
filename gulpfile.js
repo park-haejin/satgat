@@ -68,7 +68,7 @@ gulp.task('FONTS:webfont', function() {
 });
 
 // image
-gulp.task('IMAGES:common', function() {
+gulp.task('IMAGES:copy', function() {
     return gulp.src(src+'/img/**/*.*')
         .pipe(gulp.dest(dist + '/static/images/'));
 });
@@ -120,4 +120,4 @@ gulp.task('watch', function () {
 });
 
 //기본 task 설정
-gulp.task('default', ['JS:common', 'PLUGINS:combine','PLUGINS:lib', 'FONTS:webfont' ,'SASS:compile', 'HTML:index', 'HTML:combine','HTML:pop','IMAGES:common']);
+gulp.task('default', ['JS:common', 'PLUGINS:combine','PLUGINS:lib', 'FONTS:webfont' ,'SASS:compile', 'HTML:index', 'HTML:combine','HTML:pop','IMAGES:copy']);

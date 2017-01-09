@@ -8,8 +8,10 @@
     font-weight: bold;
     text-align: center;
   }
-  p input {
+  input[type="text"],input[type="password"],input[type="number"] {
     height: 45px;
+    border-color: #E8E8E8;
+    border-radius: 3px;
     font-size: 1em;
   }
   .login-box-link {
@@ -43,6 +45,17 @@
     display: none;
     &.active {
       display: block;
+    }
+  }
+  .nomember {
+    h4 {
+      margin-bottom: 2px;
+    }
+   dt,dd {
+     padding-top: 8px;
+   }
+    dd {
+      color: #E8E8E8;
     }
   }
   //== 카카오톡 상담

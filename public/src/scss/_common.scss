@@ -159,15 +159,14 @@ ul.no-style {
   margin:0;
 }
 
-ul.TBox		{
+ul.TBox,dl.TBox		{
   display: table-row;
   width: 100%;
 }
-ul.TBox > li {
+ul.TBox > li,dl.TBox > dt,dl.TBox > dd {
   display: table-cell;
   vertical-align: middle;
 }
-
 
 .pos-relative { position: relative}
 .pos-absolute { position : absolute}
