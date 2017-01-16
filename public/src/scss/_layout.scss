@@ -152,24 +152,24 @@ body {
           }
         }
         @media (max-width: 1240px) {
+          width: 38%;
+        }
+        @media (max-width: 1040px) {
           width: 34%;
-        }
-        @media (max-width: 1075px) {
-          width: 30%;
           & #searchCommonFrm input {
-            width: 84%;
+            width: 80%;
           }
         }
-        @media (max-width: 1005px) {
-          width: 24%;
-          & #searchCommonFrm input {
-            width: 76%;
-          }
-        }
-        @media (max-width: 835px) {
-          width: 21%;
+        @media (max-width: 970px) {
+          width: 28%;
           & #searchCommonFrm input {
             width: 72%;
+          }
+        }
+        @media (max-width: 800px) {
+          width: 25%;
+          & #searchCommonFrm input {
+            width: 70%;
           }
         }
       }
@@ -264,7 +264,7 @@ body {
       }
       //== 탑메뉴 끝 그라데이션 처리
       .pc-topmenu-gr {
-        height: 3px;
+        height: 6px;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,00578a+100 */
         background: #ffffff; /* Old browsers */
         background: -moz-linear-gradient(left,  #ffffff 0%, #00578a 100%); /* FF3.6-15 */
@@ -283,12 +283,15 @@ body {
       padding: 0 10px;
       z-index: 9999;
       background: #FFF;
+      //background: url("/static/images/sample-top.png") no-repeat center center;
+      //background-size: 100%;
       .btn {
         position: relative;
+        padding: 11px 0 0;
         .badge {
           position: absolute;
-          top:4px;
-          right: 4px;
+          top:8px;
+          right: -10px;
           width: 16px;
           height: 16px;
           padding: 0;
@@ -449,7 +452,7 @@ body {
     min-height: 600px;
     padding: 0;
     padding-top: 90px;
-    padding-bottom:100px;
+    padding-bottom:244px;
     box-sizing: border-box;
     transition: all 0.5s  ease;
     &.top-intro {
@@ -480,8 +483,8 @@ body {
       width: 100%;
       max-width: 1000px;
       border-bottom:2px solid #EEE ;
-      margin-top: 49px;
-      margin-bottom: 6px;
+      margin-top: 6px;
+      margin-bottom: 31px;
       text-align: center;
       background: rgba(255,255,255,0.8);
       transition: all 0.5s  ease;
@@ -491,8 +494,8 @@ body {
       }
       a {
         display: inline-block;
-        margin: 34px 15px 0;
-        padding-bottom: 10px;
+        margin: 34px 20.5px 0;
+        padding-bottom: 7px;
         color: #818181;
         font-weight: bold;
         font-size: 1.2em;
@@ -515,77 +518,7 @@ body {
         }
       }
     }
-
-    //== 상품 목록
-    .list {
-      @media (max-width: $thema-mobile-width) {
-        margin: 0 ;
-        padding: 0 1.5px;
-        .row {
-          margin: 0;
-        }
-        [class*="col-xs-"] {
-          padding:1.5px;
-        }
-      }
-      .cell {
-        position: relative;
-        top:0;
-        margin-bottom: 2em;
-        border: 1px solid #EFF0EA;
-        background-image: url(../images/gift-photo-empty.gif);
-        background-repeat:no-repeat ;
-        background-position:center center ;
-        background-size: cover ;
-        box-shadow: 0 0 0 rgba(0,0,0,0);
-        transition: all 0.5s ease;
-        &:hover {
-          top:-10px;
-          border-color:#999;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-        }
-        a {
-          display: block;
-          position: relative;
-          width: 100%;
-          padding-top: 75%;
-          box-sizing: border-box;
-          background-repeat:no-repeat ;
-          background-position:center center ;
-          background-size: cover ;
-          @media (max-width: $thema-mobile-width) {
-            padding-top: 100%;
-          }
-          .info {
-            position: absolute;
-            left: 0; right: 0; bottom:0;
-            padding: 0.6em 0.5em;
-            line-height: 100%;
-            text-align: center;
-            color: #FFF;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            background: rgba(0,0,0,0.4);
-            @media (max-width: $thema-mobile-width) {
-              padding: 4px 0.5em;
-              font-size:6px;
-              //display: none;
-            }
-          }
-        }
-        .info-post {
-          position: relative;
-          padding: 18px 0.5em;
-          text-align: center;
-          color: #000;
-          background: #FFF;
-        }
-      }
-    }
   }
-
   // == footer
   .footer {
     max-width: 1000px;
@@ -615,6 +548,165 @@ body {
           margin: 0;
         }
       }
+    }
+  }
+}
+//== main list
+.main-list {
+  width: 999px;
+  overflow: hidden;
+  @media (max-width: $thema-mobile-width) {
+    width: 100%;
+    padding: 0 2px;
+  }
+  .row{
+    width: 336*3px;
+    padding: 0;
+    margin: 0;
+    margin-left: -4px;
+    @media (max-width: $thema-mobile-width) {
+      width:  calc(100% + 18px);
+      margin:0 auto;
+      margin-left: -9.5px;
+      margin-right: -9.5px;
+    }
+  }
+  .col-xs-4 {
+    width: 336px;
+    padding: 13px 0;
+    margin: 0;
+    @media (max-width: $thema-mobile-width) {
+      width: 33.3334%;
+      box-sizing: border-box;
+      padding: 6.5px 9.5px;
+    }
+  }
+ .cell {
+   position: relative;
+   width: 293px;
+   height: 229px;
+   margin: 0 auto;
+   border: 1px solid #E1E1E1;
+   background-image: url(../images/gift-photo-empty.gif);
+   background-repeat:no-repeat ;
+   background-position:center center ;
+   background-size: cover ;
+   box-shadow: 0 0 0 rgba(0,0,0,0);
+   transition: all 0.5s ease;
+   overflow: hidden;
+   @media (max-width: $thema-mobile-width) {
+     width: 100%;
+     height: auto;
+   }
+   a {
+     display: block;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+     background-repeat:no-repeat ;
+     background-position:center center ;
+     background-size: cover ;
+     @media (max-width: $thema-mobile-width) {
+       padding-top: 100%;
+       height: auto;
+     }
+     &.show {
+       .info {
+         bottom: 0px;
+       }
+     }
+     .info {
+       position: absolute;
+       left: 0; right: 0; bottom:-41.41px;
+       width: 100%;
+       height: 41.41px;
+       padding: 0 1em;
+       line-height: 41px;
+       text-align: center;
+       color: #FFF;
+       font-size: 12.82pt;
+       white-space: nowrap;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       background: rgba(0,0,0,0.4);
+       transition: all 0.5s ease;
+       @media (max-width: $thema-mobile-width) {
+         height: 19px;
+         line-height: 19px;
+         font-size:6px;
+         //display: none;
+       }
+     }
+   }
+ }
+}
+
+//== 상품 목록
+.list {
+  @media (max-width: $thema-mobile-width) {
+    margin: 0 ;
+    padding: 0 1.5px;
+    .row {
+      margin: 0;
+    }
+    [class*="col-xs-"] {
+      padding:1.5px;
+    }
+  }
+  .cell {
+    position: relative;
+    top:0;
+    margin-bottom: 2em;
+    border: 1px solid #EFF0EA;
+    background-image: url(../images/gift-photo-empty.gif);
+    background-repeat:no-repeat ;
+    background-position:center center ;
+    background-size: cover ;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: all 0.5s ease;
+    &:hover {
+      top:-10px;
+      border-color:#999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    a {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: 75%;
+      box-sizing: border-box;
+      background-repeat:no-repeat ;
+      background-position:center center ;
+      background-size: cover ;
+      @media (max-width: $thema-mobile-width) {
+        padding-top: 100%;
+      }
+      .info {
+        position: absolute;
+        left: 0; right: 0; bottom:0;
+        padding: 0.6em 0.5em;
+        line-height: 100%;
+        text-align: center;
+        color: #FFF;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: rgba(0,0,0,0.4);
+        @media (max-width: $thema-mobile-width) {
+          padding: 4px 0.5em;
+          font-size:6px;
+          //display: none;
+        }
+      }
+    }
+    .info-post {
+      position: relative;
+      padding: 18px 0.5em;
+      text-align: center;
+      color: #000;
+      background: #FFF;
     }
   }
 }

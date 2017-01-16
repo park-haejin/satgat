@@ -42,8 +42,7 @@
                 </div>
             </div>
 
-            <div class="list">
-
+            <div class="main-list">
                 <div class="row">
                     <div class="col-xs-4">
                         <div class="cell">
@@ -59,7 +58,9 @@
                         <div class="cell">
                             <a href="../deals/deal_view.html"
                                style="background-image: url()">
-
+                                <div class="info">
+                                    유럽토마토
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -80,6 +81,9 @@
                         <div class="cell">
                             <a href="../deals/deal_view.html"
                                style="background-image: url()">
+                                <div class="info">
+                                    유럽토마토
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -97,6 +101,9 @@
                         <div class="cell">
                             <a href=".. /deals/deal_view.html"
                                style="background-image: url()">
+                                <div class="info">
+                                    유럽토마토
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -115,6 +122,15 @@
         $('.main-menu-slid a').removeClass('activate');
         $(this).addClass('activate');
         $('.main-menu-slid-tg').html($(this).text() + " <small>▼</small>")
+    });
+
+    $('.main-list  a').bind("click",function ( e) {
+        if ( !$(this).hasClass("show")) {
+            $(this).addClass("show");
+        } else {
+            $(location).attr("href",$(this).attr("href"));
+        }
+        e.preventDefault();
     });
 
     $(window).resize(function () {
