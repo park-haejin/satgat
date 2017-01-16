@@ -551,11 +551,16 @@ body {
       }
     }
     .footer-company-info {
+      display: inline-block;
+      margin: 0 auto ;
       @media (max-width: $thema-mobile-width) {
         padding: 0.5em  2em;
       }
       .footer-con {
+        display: block;
+        float: left;
         @media (max-width: $thema-mobile-width) {
+          display: block;
           float: left;
           padding-left: 1em;
           font-size: 6px;
@@ -564,7 +569,11 @@ body {
         }
       }
       .footer-logo {
+         display: block;
+        float: left;
+        padding-left: 1em;
         @media (max-width: $thema-mobile-width) {
+          display: block;
           float: left;
           width: 19%;
           padding-left: 0.5em;
