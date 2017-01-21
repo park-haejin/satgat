@@ -563,7 +563,7 @@ body {
           display: block;
           float: left;
           padding-left: 1em;
-          font-size: 6px;
+          font-size: 10px;
           line-height: 140%;
           width: 81%;
         }
@@ -596,10 +596,10 @@ body {
     margin: 0;
     margin-left: -4px;
     @media (max-width: $thema-mobile-width) {
-      width:  calc(100% + 18px);
+      width:  102%;
       margin:0 auto;
-      margin-left: -9.5px;
-      margin-right: -9.5px;
+      margin-left: -1%;
+      margin-right: -1%;
     }
   }
   .col-xs-4 {
@@ -609,7 +609,7 @@ body {
     @media (max-width: $thema-mobile-width) {
       width: 33.3334%;
       box-sizing: border-box;
-      padding: 6.5px 9.5px;
+      padding: 1.1% 1.7%;
     }
   }
  .cell {
@@ -627,7 +627,8 @@ body {
    overflow: hidden;
    @media (max-width: $thema-mobile-width) {
      width: 100%;
-     height: auto;
+     height: 0;
+     padding-top: 78%;
    }
    a {
      display: block;
