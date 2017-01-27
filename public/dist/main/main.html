@@ -23,46 +23,47 @@
             </div><!--//top banner -->
             <nav>
                 <div class="pc-topmenu">
-                    <ul class="LBox">
-                        <li>
-                            <a href="../" class="nav-btn homeBtn">HOME</a><!--
-                        --><button type="button" class="nav-btn cateBtn">카테고리</button>
-                        </li>
-                        <li class="searchBox">
-                            <form id="searchCommonFrm" name="" action="#">
-                                <input type="text" id="search_common_input" name="" class="form-control" placeholder="검색"><!--
-                             --><button type="submit" class="searchBtn"><i class="fa fa-search"></i> </button>
-                            </form>
-                        </li>
-                        <li class="li_R">
-                            <a href="/cs/post.html" class="nav-btn satgatMailBtn"><img alt="" src="/static/images/ico-post.png">삿갓우체국</button><!--
-                        --><a href="/cs/notify_list.html"  class="nav-btn csBtn">고객센터</a>
+                    <div class="top-nav">
+                        <ul class="LBox">
+                            <li>
+                                <a href="../" class="nav-btn homeBtn">HOME</a><!--
+                            --><button type="button" class="nav-btn cateBtn">카테고리</button>
+                            </li>
+                            <li class="searchBox">
+                                <form id="searchCommonFrm" name="" action="#">
+                                    <input type="text" id="search_common_input" name="" class="form-control" placeholder="검색"><!--
+                                 --><button type="submit" class="searchBtn"><i class="fa fa-search"></i> </button>
+                                </form>
+                            </li>
+                            <li class="li_R nav-control">
+                                <a href="/cs/post.html" class="nav-btn satgatMailBtn"><img alt="" src="/static/images/ico-post.png">삿갓우체국</button><!--
+                            --><a href="/cs/notify_list.html"  class="nav-btn csBtn">고객센터</a><!--
 
+                            //로그인 전
+                            <div class="inline loginBox">
+                                <a href="/member/login.html" class="btn loginBtn">로그인</a> &nbsp;
+                                <button type="button"  data-href="/member/membership.html" class="btn memberBtn">회원가입 하기</button>
+                            </div><!--
 
-                        //로그인 전
-                        <div class="inline loginBox">
-                            <a href="/member/login.html" class="btn loginBtn">로그인</a> &nbsp;
-                            <button type="button"  data-href="/member/membership.html" class="btn memberBtn">회원가입 하기</button>
-                        </div><!--
-
-
-                        // 로그인 후
-                        --><div class="inline userInfoBox"><!--
-                                --><button type="button" class="nav-btn btn-sm userMailBtn">
-                                    <i class="fa fa-envelope"></i>
-                                    <span class="badge">1</span>
-                                </button><!--
-                                    --><button type="button" class="nav-btn btn-sm cartBtn">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span class="badge">2</span>
-                                </button><!--
-                                    --><button onclick="location.href='../mypage/profile-myinfo.html'" class="userBtn">
-                                            <span class="user-photo"></span>
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
+                            // 로그인 후
+                            --><div class="inline userInfoBox">
+                                    <button type="button" class="nav-btn csBtn">로그아웃</button><!--
+                                    --><button type="button" class="nav-btn btn-sm userMailBtn">
+                                        <i class="fa fa-envelope"></i>
+                                        <span class="badge">1</span>
+                                    </button><!--
+                                        --><button type="button" class="nav-btn btn-sm cartBtn">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="badge">2</span>
+                                    </button><!--
+                                        --><button onclick="location.href='../mypage/profile-myinfo.html'" class="userBtn">
+                                                <span class="user-photo"></span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="alarm">
                         <ul class="alarm-list">
 

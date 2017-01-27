@@ -1,6 +1,8 @@
 var app = {
     load: function () {
         app.header.event();
+        app.header.resiseSearch();
+        app.header.resizeActive();
     },
     header : {
         event : function () {
@@ -35,6 +37,19 @@ var app = {
             // 모바일버전 탑메뉴 토글
             $('.mb-topmenu .listBtn, .closeSideMenuBtn').bind("click",function(e){
                 $('.mobile-menu').toggleClass("active")
+            });
+        },
+        resiseSearch : function() {
+            var serchbox_width = $('.pc-topmenu').innerWidth() - $('.nav-control').innerWidth() - 250;
+            if ( serchbox_width > 450 )  serchbox_width = 450;
+
+            $('.searchBox').css('width',serchbox_width + 'px');
+            $('.searchBox').find('#search_common_input').css('width',( serchbox_width - 80  ) + 'px');
+        },
+        resizeActive : function () {
+            var _this = this;
+            $( window ).resize(function() {
+                _this.resiseSearch();
             });
         }
     }
