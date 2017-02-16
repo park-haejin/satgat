@@ -46,6 +46,7 @@
   h1 {
     margin: 0;
     margin-bottom: 11px;
+    font-weight: normal;
   }
   p {
     color: $gray-light;
@@ -53,7 +54,7 @@
 }
 //== 댓글입력
 .chatt-box-form {
-  padding: 15px;
+  padding:11px 15px;
   background: #EEEEEE;
 
 }
@@ -63,15 +64,17 @@
   .user-photo {
     width:50px;
     height: 50px;
+    border-radius: 5px;
   }
+  th { vertical-align: top}
   td {
     border: 0;
     padding: 0;
-    vertical-align:top;
+    vertical-align:middle;
   }
   &.comment-btn {
     input[type="text"].form-control {
-      height: 50px;
+      height: 40px;
       border: 0;
       border-radius: 3px 0 0 3px;
       margin: 0;
@@ -80,10 +83,13 @@
     }
     button {
       width: 55px;
-      height: 50px;
+      height: 40px;
       border: 0;
       border-radius: 0 3px 3px 0;
       vertical-align: top;
+      &:hover {
+        background: #FFF;
+      }
     }
   }
   &.comment-regi {
@@ -93,6 +99,7 @@
       border-radius: 3px;
       background: #FFF;
       small {
+        font-size: 11px;
         color: #999;
       }
       textarea {
@@ -118,47 +125,53 @@
 //== chatting 내역
 .box-chatting {
   list-style: none;
-  margin-top:13px ;
+  margin-top:25px ;
   padding: 0;
-  li {
-    padding: 13px 0;
-  }
 
   //== 챗팅 본문
   .user-photo {
-    width: 80%;
-    max-width:77px;
+    width: 100%;
+    max-width:60px;
     height: 40%;
-    max-height: 77px;
-    border: 0;
+    max-height: 60px;
+    border: 1px solid #EEE;
+    border-radius: 5px;
     background: #FFF;
+  }
+  .box-chatting-edit {
+    position: absolute;
+    width: 76px;
+    top:0;
+    right: 28px;
+    border: 1px solid #F3F3F3;
+    z-index: 1;
+    button {
+      border: 0;
+      border-radius: 0;
+    }
   }
   .box-chatting-commet {
     position: relative;
     width: 100%;
-    padding: 15px;
-    padding-top: 0;
+    padding-left: 15px;
     color: #838383;
     background: #FFF;
+    h4 {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: bold;
+    }
     .date {
-      font-size: 12px;
+      font-size: 11px;
     }
     .li_R {
       color: #838383;
     }
-    .box-chatting-edit {
-      position: absolute;
-      width: 76px;
-      top:15px;
-      right: 40px;
-      border: 1px solid #CACACA;
-      z-index: 1;
-      button {
-        border: 0;
-        border-radius: 0;
-      }
-    }
+
     .box-chatting-commet-con {
+      padding-top: 5px;
+      font-size: 12px;
       white-space: pre-line;
     }
     .chatt-from {
@@ -182,18 +195,52 @@
     }
   }
   .chatt-customer {
+    padding: 20px 30px;
+    background:#F5F5F5 ;
+    border-radius: 7px;
+    margin-bottom: 25px;
     .box-chatting-commet {
       background: #F5F5F5;
     }
+    .chatt-contants {
+      padding-top: 20px;
+      &.box-chatting-commet {
+        padding: 0;
+      }
+    }
+    .commentSetBtn {
+      padding: 0 10px;
+      margin-right:-15px;
+    }
+    .box-chatting-edit {
+      right: 14px;
+    }
   }
   .chatt-helper {
-    .box-chatting-commet {
-      border: 1px solid #EEE;
+    margin-bottom:25px;
+    padding: 20px 16px;
+    margin-left: 30px;
+    border-radius: 7px;
+    border: 1px solid #EEE;
+    h4 {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      color:#696969;
     }
+    .date {
+      font-size: 11px;
+      color:#9A9A9A;
+    }
+  }
+  .col-xs-9 {
+    padding-top:5px !important;
   }
 }
 .moreBuyBtn {
-  padding: 1em 0;
+  padding: 0.8em 0;
+  border-radius: 25px;
   border-color: #A0C3FF;
 }
 //== 구매하기

@@ -44,12 +44,15 @@ body {
       color: #FFF;
       font-size: 1.3em;
       background: #7199CE;
+      overflow: hidden;
       .header-banner-view {
         max-width: 1240px;
         margin: 0 auto;
       }
       .closeTopBannerBtn {
-        float: right;
+        position: absolute;
+        top:0;
+        right: 4px;
         height: 45px;
         border: 0;
         background: transparent;
@@ -635,6 +638,7 @@ body {
    @media (max-width: $thema-mobile-width) {
      width: 100%;
      height: auto;
+     border-color:#FFF;
    }
    a {
      display: block;
@@ -859,5 +863,35 @@ body {
     &:hover, &.activate {
       color: $brand-primary;
     }
+  }
+}
+
+//== 제휴문의
+.contact-form-box {
+  th,td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid #e5e5e5 !important;
+    color:#777;
+
+  }
+  th {
+    vertical-align: middle !important;
+    span {
+      color:#ed5b5b;
+    }
+  }
+  .form-control {
+    border-color:#e5e5e5;
+  }
+  .radio {
+    padding-left: 30px;
+    label {
+      padding-left: 0 !important;
+      margin-right: 40px !important;
+    }
+  }
+  textarea {
+    resize:vertical ;
   }
 }
