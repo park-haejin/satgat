@@ -924,6 +924,12 @@
 <!-- common plug-in JS -->
 <script type="text/javascript" src="../static/js/app.js"></script>
 <script type="text/javascript">
+    $('.header').on('click','.csBtn',function(e){
+        $.get( "/member/login_pop.html", function( data ) {
+            $( "#modal-box" ).html( data );
+            $( "#modal-box" ).modal('show');
+        });
+    });
 </script>
 <div id="modal-box" class="modal fade  Pop-Wrap" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-backdrop="static">
 

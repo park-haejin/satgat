@@ -25,3 +25,18 @@
     padding-bottom: 20px;
   }
 }
+
+.modal-closeBtn {
+
+}
+
+@media (min-width: 420px) {
+  .modal-login {
+    width: 90%;
+  }
+}
+.modal-login {
+  width:416px ;
+  margin: 10px auto;
+  margin-top: 164px;
+}

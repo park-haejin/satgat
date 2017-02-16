@@ -1,17 +1,16 @@
 //== 로그인
 .login-box {
-  width:336px ;
-  padding-top: 120px;
+  max-width: 336px;
   margin: 0 auto;
   h1 {
-    padding-bottom: 26px;
-    font-weight: bold;
     text-align: center;
+    margin: 0;
+    padding-bottom: 26px;
   }
-  input[type="text"],input[type="password"],input[type="number"] {
-    height: 45px;
-    border-color: #E8E8E8;
-    border-radius: 3px;
+  input[type="text"],input[type="password"],input[type="tel"] {
+    height: 50px;
+    border-color: #D2D2D2;
+    border-radius: 8px;
     font-size: 1em;
   }
   .login-box-link {
@@ -32,11 +31,13 @@
   .btn-submit {
     width: 100%;
     border-radius: 35px;
+    background: #83B2E0;
   }
   .chkmember {
     .btn {
+      height: 44px;
       padding: 0;
-      margin: 0 1em 1em 0;
+      margin: 0 0 1em;
       font-size: 1.1em;
     }
   }
@@ -46,7 +47,11 @@
     &.active {
       display: block;
     }
+    p {
+      padding: 8px 0;
+    }
   }
+
   .nomember {
     h4 {
       margin-bottom: 2px;
@@ -58,13 +63,14 @@
       color: #E8E8E8;
     }
   }
+
   //== 카카오톡 상담
   .kakaobox {
     width: 100%;
     margin: 0 auto;
     margin-top:28px ;
     padding: 14px;
-    border-radius: 6px;
+    border-radius: 20px;
     background: #EEE;
     .ico-kakao { width: 60px }
     p {
@@ -150,4 +156,10 @@
   &:hover {
     color: #000;
   }
+}
+
+.modal-closeBtn {
+  position: absolute;
+  top:10px;
+  right: 10px;
 }
